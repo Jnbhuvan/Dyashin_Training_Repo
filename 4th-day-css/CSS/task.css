@@ -2,7 +2,6 @@
   border: 2px solid rgb(90, 158, 255);
   background-color: white;
   /* border-left: 10vw; */
-  margin: 10vw;
   border-radius: 2%;
 }
 
@@ -12,6 +11,7 @@
   justify-content: center;
   align-items: center;
   margin: 10vh;
+  flex-wrap: wrap;
 }
 
 span {
@@ -27,12 +27,58 @@ span {
   align-content: center;
   flex-direction: row;
   font-weight: bold;
-  width: 15vw;
-  height: 5vw;
+  width: 12rem;
+  height: 5rem;
   box-shadow: 10px 10px 5px #c0bebe;
   border: 1px solid aqua;
   background-color: white;
   margin: 1vw;
   font-size: 0.8rem;
   border-radius: 10%;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  width: 97vw;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border: 2px solid aqua;
+  border-radius: 10px;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-between;
+  align-items: center;
+  /* width: 30rem; */
+  height: 5rem;
+  flex-wrap: wrap;
+  border: 2px solid aqua;
+  border-radius: 10px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: black;
+  text-decoration: none;
+
+  font-family: Play, serif;
+}
+li {
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  /* padding-bottom: 0.5rem;
+  padding-top: 0.5rem;; */
+}
+.logo,
+img {
+  height: 5rem;
 }
