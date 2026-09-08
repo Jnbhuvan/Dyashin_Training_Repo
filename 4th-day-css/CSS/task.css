@@ -1,0 +1,38 @@
+.boss {
+  border: 2px solid rgb(90, 158, 255);
+  background-color: white;
+  /* border-left: 10vw; */
+  margin: 10vw;
+  border-radius: 2%;
+}
+
+.mainbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10vh;
+}
+
+span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 15px;
+  color: rgb(5, 138, 248);
+}
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: row;
+  font-weight: bold;
+  width: 15vw;
+  height: 5vw;
+  box-shadow: 10px 10px 5px #c0bebe;
+  border: 1px solid aqua;
+  background-color: white;
+  margin: 1vw;
+  font-size: 0.8rem;
+  border-radius: 10%;
+}

@@ -1,0 +1,108 @@
+CSS Introduction
+-----  ------ ------
+|      |      |
+|       -----  -----
+|           |      |
+-----  ------  -----
+
+Syntax:
+body{
+    color: blue;
+}
+
+Selectors are the fundamental building blocks of CSS, used to target specific HTML elements on a web page. They act as a bridge between CSS rules and the HTML structure, determining which elements should be styled.
+
+-----------------------------------------------------------------------------------
+
+Types of CSS Applications:
+    1. Inline CSS
+    2. Internal CSS
+    3. External CSS
+
+1. Inline CSS: Used to instantly check/test a particular design
+
+Easy to apply directly to individual elements.
+Can Make HTML messy and harder to maintain.
+
+2. Internal CSS: Used to apply CSS on a single document or page. It can affect all the elements of the page
+
+Keeps styles separate from the HTML content, which improves readability compared to inline styles.
+Becomes difficult for multiple pages.
+
+3. External CSS: used to apply css on multiple pages or all pages. Here we write all the css code in a css file.
+
+For larger projects or sites with multiple pages where you want to reuse the same styles across multiple pages or components.
+Easily manageable and maintainable, as styles are centralized in one file.
+Requires an additional HTTP request to load the CSS file content.
+
+Types of selector:
+1. ELement Selectors: Based on the HTML element name.
+
+2. Id Selectors: Based on the particular id attribute of an HTML element to select a specific element.
+
+3. Class Selectors: Selects HTML elements with specific class attribute. 
+
+4. Universal selector: selects * all the html elements on the page and affects every HTML element on the page.
+ 
+5. Grouping Selector:
+
+h1,h2,p{
+    color: red;
+}
+
+6. attribute Selector:
+
+ex: input[type="submit"]{
+    color: blue;
+}
+
+
+===================================================
+-------
+Task: |
+-------
+
+Find out the usuage px, rem, em, %, vw, vh?
+Whats Responsive in CSS?
+
+===================================================
+
+CSS Units — Quick Notes
+Unit	Relative to	Common Use
+px	Fixed CSS pixels	Borders, icons, precise sizes
+rem	Root (html) font size	Font sizes, padding, margins
+em	Element/parent font size	Component-based sizing
+%	Parent/container size	Widths, responsive layouts
+vw	Viewport width	Screen-width based sizing
+vh	Viewport height	Full-screen sections
+Remember
+px → Fixed size
+rem → Relative to root
+em → Relative to font size
+% → Relative to parent
+vw → Relative to viewport width
+vh → Relative to viewport height
+Examples
+1rem = root font-size
+2em  = 2 × relevant font-size
+50%  = 50% of parent
+50vw = 50% of viewport width
+50vh = 50% of viewport height
+Practical rule
+Typography & spacing → rem
+Component sizing     → em
+Container sizing     → %
+Viewport sizing      → vw / vh
+Precise small sizes  → px
+
+One-line memory trick:
+rem → Root | em → Element | % → Parent | vw/vh → Viewport | px → Fixed
+
+--------------------------------------------------------------------------------------
+
+Inline vs Block Elements in CSS
+
+Box model Property in CSS
+
+task assignment in css
+
