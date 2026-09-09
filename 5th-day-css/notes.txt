@@ -20,3 +20,26 @@ pseudo elements and pseudo classes usuage
 translate(), rotate(), scaleX(), scaleY(), scale(), skewX(), skewY(), skew(), matrix()
 
 --------------------------------------------------------------------------------------
+
+Transition
+
+-------------------------------------------------------------------------------------
+
+CSS Animation
+
+allows us to animate the properties of HTML elements over time. This can be doe using the @keyframes rule and the animation property.
+
+@keyframes: this rule defines the animation's stages, specifying what styles should apply at various points during the animation property.
+
+hands on practice animation html css file
+
+---------------------------------------------------------------------------------------
+
+Media Queries
+
+@media (min-width: 426px){
+    .box{
+        width:300px;
+    }
+    
+}
