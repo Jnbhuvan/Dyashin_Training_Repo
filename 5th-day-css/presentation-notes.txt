@@ -1,0 +1,29 @@
+9th September 2026 Wednesday
+
+
+Opacity, Z-index, shadows, pseudo-class, pseudo-elements
+
+Gradients, object-fit, box sizing, grid
+
+---------------------------------------------------------------------------------------
+
+Opacity: Controls the transparency of an element applying even to its children elements.
+Ex:
+opacity: 1       ██████████  100% visible
+opacity: 0.7     ███████░░░   70% visible
+opacity: 0.5     █████░░░░░   50% visible
+opacity: 0       ░░░░░░░░░░    invisible
+
+Opacity applies to the entire element, including its children.
+
+---------------------------------------------------------------------------------------
+
+Z-Index: which element appears on top when elements overlap.
+
+* CSS uses z-index to control this stacking order.
+* Higher z-index = generally higher in the stacking order
+* Doesn't Work on static elements.
+
+---------------------------------------------------------------------------------------
+
+Shadows

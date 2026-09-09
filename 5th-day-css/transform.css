@@ -1,0 +1,53 @@
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: coral;
+  gap: 1rem;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  /* width: 50px; */
+  margin: 30px;
+  padding: 30px;
+  background-color: white;
+}
+.box:hover {
+  transform: none;
+}
+
+.rotate {
+  transform: rotate(90deg);
+}
+
+.scalex {
+  transform: scaleX(2);
+}
+
+.scaley {
+  transform: scaleY(2);
+}
+
+.skewx {
+  transform: skewX(50deg);
+}
+
+.skewy {
+  transform: skewY(30deg);
+}
+
+.translate {
+  transform: translate(10px, 20px);
+}
+
+.mainbox {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  /* justify-content: center; */
+  align-items: center;
+  flex-wrap: wrap;
+}

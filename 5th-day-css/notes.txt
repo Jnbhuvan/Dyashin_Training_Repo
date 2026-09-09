@@ -1,0 +1,22 @@
+9th September 2026 Wednesday
+
+-------------------------------------------------------------------------
+
+CSS Positioning: 
+
+1. Static
+2. Fixed.
+3. Absolute
+4. sticky
+
+Practiced the same in the position.html document
+
+---------------------------------------------
+pseudo elements and pseudo classes usuage
+
+--------------------------------------------------------------------------------------
+
+2d, 3d transforms:
+translate(), rotate(), scaleX(), scaleY(), scale(), skewX(), skewY(), skew(), matrix()
+
+--------------------------------------------------------------------------------------
