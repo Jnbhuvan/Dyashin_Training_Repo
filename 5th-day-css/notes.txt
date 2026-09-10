@@ -43,3 +43,12 @@ Media Queries
     }
     
 }
+
+---------------------------------------------------------------------------------------
+
+Case study: Using only HTML & CSS 
+
+
+DSJobby
+
+Navbar, Hero Section, your career growth starts here, explore opportunities, our growing network smaller size, dyashin group companies, footer section.
