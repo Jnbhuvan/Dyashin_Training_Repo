@@ -1,12 +1,12 @@
 9th September 2026 Wednesday
 
-
+--------------------------------------------------------------------------------------
 Opacity, Z-index, shadows, pseudo-class, pseudo-elements
 
 Gradients, object-fit, box sizing, grid
 
 ---------------------------------------------------------------------------------------
-
+1. Opacity
 Opacity: Controls the transparency of an element applying even to its children elements.
 Ex:
 opacity: 1       ██████████  100% visible
@@ -15,6 +15,29 @@ opacity: 0.5     █████░░░░░   50% visible
 opacity: 0       ░░░░░░░░░░    invisible
 
 Opacity applies to the entire element, including its children.
+
+
+----------------------------------------------------------------
+
+pseudo class 
+Ex
+a:hover{
+             color: green;
+         }
+
+pseudo element
+Ex
+p::firstline{
+    background-color:red;
+}
+
+************************
+Pseduo Classes starts with (' : ') name
+
+Peudo-Elements begins with (' :: ') double colon.
+************************
+
+-------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------
 
@@ -26,4 +49,27 @@ Z-Index: which element appears on top when elements overlap.
 
 ---------------------------------------------------------------------------------------
 
-Shadows
+Shadows:
+
+text-shadow: offsetX offsetY blurRadius color;
+Ex
+        h1 {
+            color: green;
+            text-shadow: 3px 3px 3px lightgreen;
+        }
+
+box-shadow: offsetX offsetY blurRadius spreadRadius color;
+Ex
+        h1 {
+            color: green;
+            box-shadow: 3px 3px 3px lightgreen;
+        }
+
+-----------------------------------------------------------------------------
+
+Types of Gradients
+
+The Gradients can be categorized into 3 types:
+1. Linear Gradients
+2. Radial Gradients
+3. Conic Gradients
