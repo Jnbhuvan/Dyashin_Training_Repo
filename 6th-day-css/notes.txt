@@ -1,0 +1,25 @@
+10th September 2026 Thursday, 6th day 
+
+
+Bootstrap - 2010-11 Open Source Jacob thornton & Mark Otto
+
+Popular front-end-framework for developing responsive and mobile first websites.
+It provides a collection of pre-built HTML, CSS, and JS components that can be easily customized to match your design needs.
+
+Framework is a pre-built, reusuable set of code, tools, and libraries that provides a foundation.
+
+Bootstrap implementation:
+
+1. CDN (Content Delivery network)
+2. Installation.
+
+Features:
+1. responsive grid system
+2. Pre-designed components
+3. Utitlity Classes
+4. JS plugins
+
+Bootstrap usuage.
+
+Bootstrap HandsON Practice
+
