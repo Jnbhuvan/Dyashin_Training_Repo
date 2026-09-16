@@ -1,0 +1,49 @@
+16th/September/2026 Wednesday 9th day
+
+--------------------------------------------------
+JS BrushUp
+
+---------------------------------------------------
+Types of Functions:
+ 
+1. Named Functions
+2. Anonymous Functions
+3. IIFE - Immediately invoked function expression
+4. Arrow function
+
+----------------------------------------------------------------
+callbackfunctions
+
+function greet(){
+    console.log("hello world");
+}
+
+function saysomething(callback){
+    console.log("This is a callback function");
+    callback();
+}
+saysomething(greet);
+
+-------------------------------------------------------------
+let, const, var variable declaration types
+
+var - supports redeclaration and reintialization + global scopic ES5 feature
+let - no redeclaration support + block scopic                     Es6 feature
+const - no redeclaration & reintialization support + block scopic Es6 feature
+
+hoisting 
+
+-------------------------------------------------------------
+
+Copying Objects Es6 feature
+
+Shallow Copy & Deep Copy of Object and Array
+
+... <- Rest Parameter or Spread Operator
+
+--------------------------------------------------------------
+
+Destructuring
+
+Extracting the key values by destructuring
+

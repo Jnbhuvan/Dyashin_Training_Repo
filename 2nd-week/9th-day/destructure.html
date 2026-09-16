@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuring Practice using JS</title>
+  </head>
+  <body>
+    <script>
+      let person = {
+        fName: "Jon",
+        age: 22,
+        address: {
+          city: "NY",
+          pincode: "123",
+        },
+      };
+
+      //destructuring
+      const {
+        fName,
+        age,
+        address: { city },
+      } = person;
+
+      console.log(fName);
+      console.log("age", age);
+      console.log(city);
+
+      let person2 = {
+        fName: "person2firstname",
+        age: 22,
+        address: {
+          city: "NY",
+          pincode: "123",
+        },
+      };
+      const {
+        fName: firstName,
+        address: { city: cityName },
+      } = person2;
+
+      console.log(firstName, cityName);
+    </script>
+  </body>
+</html>

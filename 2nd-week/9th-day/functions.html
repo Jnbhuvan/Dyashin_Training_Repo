@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions Practice</title>
+  </head>
+  <body>
+    <script>
+      // named functions
+      function add(a, b) {
+        return a + b;
+      }
+      console.log("Named Functions: " + add(10, 20));
+
+      // Anonymous Function
+      let sub = function (a, b) {
+        return a - b;
+      };
+
+      console.log("Anonymous function: " + sub(30, 20));
+
+      // Immediately invoked function expression
+      let mul = (function (a, b) {
+        return a * b;
+      })(10, 20);
+      console.log("IIFE: " + mul);
+
+      //Arrow functions
+
+      let div = (a, b) => {
+        return a / b;
+      };
+      console.log("Arrow functions: " + div(10, 2));
+
+      //   alert("hello");
+    </script>
+  </body>
+</html>

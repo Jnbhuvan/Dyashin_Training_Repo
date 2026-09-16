@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Copying</title>
+  </head>
+  <body>
+    <script>
+      //   const personObj = {
+      //     name: "John",
+      //     age: 30,
+      //     address: {
+      //       city: "New York",
+      //       zip: 10001,
+      //     },
+      //   };
+
+      //   let person = { ...personObj, address: { ...personObj.address } };
+
+      //   console.log(person, personObj);
+
+      //   person.fName = "Peter";
+      //   person.address.city = "Los Angeles";
+
+      //   console.log(person, personObj);
+
+      //   personDeepCopy = JSON.parse(JSON.stringify(personObj));
+
+      //   console.log(personDeepCopy);
+
+      let arr = [1, 2, 3, [3, 4], 4, 5];
+      console.log("arr", arr);
+
+      let arrCopy = [...arr];
+
+      console.log("arrCopy: " + arrCopy);
+
+      arrCopy[0] = 45;
+
+      let arrDeepCopy = JSON.parse(JSON.stringify(arr));
+      console.log("arrDeepCopy", arrDeepCopy);
+      console.log(typeof arr);
+      console.log(Array.isArray(arr));
+      console.log("arrCopy: " + arrCopy);
+      console.log("arr", arr);
+    </script>
+  </body>
+</html>
