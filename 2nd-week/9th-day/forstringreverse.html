@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ForStringReverse</title>
+  </head>
+  <body>
+    <script>
+      let wordsReverse = (str) => {
+        let reverse = [];
+
+        for (w of str.split(" ")) {
+          reverse.push(w.split("").reverse().join(""));
+        }
+        console.log(reverse.join(" "));
+      };
+      wordsReverse("Hello my name is Raju");
+
+      //   without using for
+      let wordsReverseWithoutFor = (str) => {
+        let reverse = [];
+        return str.split(" ").map((w) => {
+          reverse.push(w.split("").reverse().join(""));
+        });
+      };
+
+      wordsReverseWithoutFor("Hello my name is Raju");
+    </script>
+  </body>
+</html>
