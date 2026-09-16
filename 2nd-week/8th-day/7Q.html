@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creating object without using new keyword with function</title>
+  </head>
+  <body>
+    <script>
+      function objectCreationFunction(name, age) {
+        return {
+          name: name,
+          age: age,
+          display: () => {
+            console.log("name: " + name + " Age: " + age);
+          },
+        };
+      }
+
+      let b = objectCreationFunction("jnbhuvan", 21);
+      let a = objectCreationFunction("xyz", 21);
+
+      a.display();
+    </script>
+  </body>
+</html>

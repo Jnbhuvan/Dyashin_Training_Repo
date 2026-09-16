@@ -1,0 +1,65 @@
+<!-- ternary operator exercise -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Training</title>
+  </head>
+
+  <body>
+    <form action="" method="post">
+      <label for="weight">
+        Enter your weight
+        <input type="number" id="weight" />
+      </label>
+
+      <br /><br />
+
+      <label for="height">
+        Enter your height in cm
+        <input type="number" id="height" />
+      </label>
+
+      <br /><br />
+
+      <input type="submit" id="submit" onclick="findBMI(event)" />
+
+      <h1 id="bmi"></h1>
+    </form>
+
+    <script>
+      function findBMI(event) {
+        event.preventDefault();
+
+        let w = document.getElementById("weight");
+        let h = document.getElementById("height");
+
+        let heightInMeters = h.value / 100;
+
+        let bmi = w.value / (heightInMeters * heightInMeters);
+
+        let result =
+          bmi < 16
+            ? "Severe Thinness"
+            : bmi < 17
+              ? "Moderate Thinness"
+              : bmi < 18.5
+                ? "Mild Thinness"
+                : bmi < 25
+                  ? "Normal"
+                  : bmi < 30
+                    ? "Overweight"
+                    : bmi < 35
+                      ? "Obese Class 1"
+                      : bmi < 40
+                        ? "Obese Class 2"
+                        : "Obese Class 3";
+
+        document.getElementById("bmi").innerText =
+          "BMI: " + bmi + " - " + result;
+      }
+    </script>
+  </body>
+</html>

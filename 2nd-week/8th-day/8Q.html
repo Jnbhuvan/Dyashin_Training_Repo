@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Creation with new Keyword</title>
+  </head>
+  <body>
+    <script>
+      function ObjectCreation(name, age) {
+        this.name = name;
+        this.age = age;
+        this.display = () => {
+          console.log("Name " + name + "Age: " + age);
+        };
+      }
+
+      let a = new ObjectCreation("xyz", 89);
+      a.display();
+    </script>
+  </body>
+</html>

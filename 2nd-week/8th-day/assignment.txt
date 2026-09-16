@@ -1,0 +1,244 @@
+1. List 10 JavaScript / ECMAScript Engines.
+
+Answer:
+
+A JavaScript engine is software that executes JavaScript code. Some commonly known JavaScript engines are:
+
+V8 – Used in Google Chrome and Node.js.
+SpiderMonkey – Used in Mozilla Firefox.
+JavaScriptCore (JSC) – Used in Safari.
+ChakraCore – Used in older Microsoft Edge.
+Hermes – Used mainly with React Native.
+QuickJS – Lightweight JavaScript engine.
+Duktape – Used in embedded systems.
+JerryScript – Designed for IoT and embedded devices.
+Rhino – JavaScript engine implemented in Java.
+GraalJS – JavaScript engine provided by GraalVM.
+2. What is a JavaScript Engine?
+
+Answer:
+
+A JavaScript engine is a software program that reads, processes, and executes JavaScript code.
+
+It generally performs tasks such as:
+
+Parsing the JavaScript code
+Compiling/executing the code
+Optimizing code during execution
+Managing memory
+
+Example: V8 is the JavaScript engine used by Chrome and Node.js.
+
+JavaScript Code → JavaScript Engine → Output
+3. What is the difference between JavaScript and ECMAScript?
+
+Answer:
+
+JavaScript is a programming language, while ECMAScript is the standardized specification that defines the core rules and features of the language.
+
+JavaScript	ECMAScript
+Programming language	Language specification
+Implements ECMAScript	Defines language rules
+Used to develop applications	Provides the standard for the language
+
+In simple words:
+
+ECMAScript is the standard, and JavaScript is a language that follows that standard.
+
+4. What is the difference between ECMA and ECMAScript?
+
+Answer:
+
+ECMA refers to Ecma International, an organization that develops and publishes technology standards.
+
+ECMAScript is one of the standards developed under Ecma International, specifically defining a scripting language.
+
+ECMA	ECMAScript
+Standards organization	Language specification
+Develops/publishes standards	Defines the core JavaScript language
+Covers many technology standards	Specifically related to scripting languages
+
+Example:
+
+ECMAScript is standardized as ECMA-262.
+
+5. What are the data types in JavaScript? Give examples.
+
+Answer:
+
+JavaScript has 8 main data types.
+
+Primitive Data Types
+String – Represents text.
+let name = "Bhuvan";
+Number – Represents numbers.
+let age = 21;
+BigInt – Represents very large integers.
+let num = 12345678901234567890n;
+Boolean – Represents true or false.
+let isStudent = true;
+Undefined – A variable declared without a value.
+let x;
+Null – Represents an intentional absence of a value.
+let data = null;
+Symbol – Represents a unique value.
+let id = Symbol("id");
+Non-Primitive Data Type
+Object – Stores collections of data.
+let student = {
+    name: "Bhuvan",
+    age: 21
+};
+6. Create 5 objects without using the new keyword with one function.
+
+Answer:
+
+We can use a factory function to create objects without using new.
+
+function Student(name, age) {
+    return {
+        name: name,
+        age: age,
+        display: function() {
+            console.log(this.name + " - " + this.age);
+        }
+    };
+}
+
+let s1 = Student("Bhuvan", 21);
+let s2 = Student("Rahul", 22);
+let s3 = Student("Arun", 20);
+let s4 = Student("Kiran", 21);
+let s5 = Student("Manoj", 22);
+
+s1.display();
+s2.display();
+s3.display();
+s4.display();
+s5.display();
+
+Note: A factory function is a normal function that creates and returns an object.
+
+7. Create 5 objects using the new keyword with one function.
+
+Answer:
+
+We can use a constructor function with the new keyword to create objects.
+
+function Student(name, age) {
+    this.name = name;
+    this.age = age;
+
+    this.display = function() {
+        console.log(this.name + " - " + this.age);
+    };
+}
+
+let s1 = new Student("Bhuvan", 21);
+let s2 = new Student("Rahul", 22);
+let s3 = new Student("Arun", 20);
+let s4 = new Student("Kiran", 21);
+let s5 = new Student("Manoj", 22);
+
+s1.display();
+s2.display();
+s3.display();
+s4.display();
+s5.display();
+
+Note: The new keyword creates a new object and uses the constructor function to initialize its properties.
+
+8. What is the difference between null and undefined?
+
+Answer:
+
+Both represent the absence of a value, but their meanings are different.
+
+null	undefined
+Represents intentional absence of value	Usually means a value has not been assigned
+Assigned explicitly	Often assigned automatically
+Example: let x = null;	Example: let x;
+typeof null returns "object"	typeof undefined returns "undefined"
+Example:
+let a;
+let b = null;
+
+console.log(a); // undefined
+console.log(b); // null
+
+In simple words:
+
+undefined → value is not assigned.
+null → value is intentionally empty.
+
+9. What is the difference between Primitive and Reference Types?
+
+Answer:
+
+Primitive types store individual values, whereas reference types refer to objects.
+
+Primitive Example:
+let a = 10;
+let b = a;
+
+b = 20;
+
+console.log(a); // 10
+console.log(b); // 20
+
+Changing b does not affect a.
+
+Reference Example:
+let a = { value: 10 };
+let b = a;
+
+b.value = 20;
+
+console.log(a.value); // 20
+
+Here, both a and b refer to the same object.
+
+Difference:
+Primitive	Reference
+Stores a value	Refers to an object
+Examples: Number, String, Boolean	Examples: Object, Array, Function
+Assignment copies the value	Assignment copies the reference
+Values are immutable	Objects can generally be modified
+10. How do you generate a random number between 1 and 25?
+
+Answer:
+
+We can use Math.random() and Math.floor().
+
+let num = Math.floor(Math.random() * 25) + 1;
+
+console.log(num);
+
+This generates a random integer from 1 to 25, including both 1 and 25.
+
+Explanation:
+Math.random()
+
+generates a number from 0 up to, but not including, 1.
+
+Math.random() * 25
+
+gives a value from 0 up to less than 25.
+
+Math.floor(Math.random() * 25) + 1
+
+converts it into an integer from:
+
+1, 2, 3, ... 24, 25
+Quick Revision
+No.	Topic	Key Point
+1	JS Engines	V8, SpiderMonkey, JSC, etc.
+2	JS Engine	Executes JavaScript code
+3	JavaScript vs ECMAScript	Language vs specification
+4	ECMA vs ECMAScript	Organization vs specification
+5	Data Types	7 primitive + Object
+6	Objects without new	Factory function
+7	Objects with new	Constructor function
+8	null vs undefined	Intentional empty vs unassigned
+9	Primitive vs Reference	Value vs object reference
+10	Random number	Math.floor(Math.random() * 25) + 1

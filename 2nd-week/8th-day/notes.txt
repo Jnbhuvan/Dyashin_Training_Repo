@@ -1,0 +1,51 @@
+15th September 2026 Tuesday
+
+Introduction to JS
+
+JS Engine
+
+Different browsers using diffirent JS Engine
+
+JS DataTypes
+
+Primitive DataTypes:
+1. String
+2. Number
+3. Boolean
+4. NUll
+5. Undefined
+6. Symbol
+7. BigInt
+
+Non-Primitive / reference DataTypes
+1. Object
+2. Arrays
+3. Functions
+
+Operators:
+1. Arithmetic Operators
+2. Logical Operators
+3. Assignment Operators
+4. Relative Operators
+5. Bitwise Opearators
+6. Identity Operators
+
+
+** ES6 introduced Let and var keywords replacing var usuage.
+
+How to connect JS to HTML
+
+console.log & console.error
+
+if condition & ternery Operators
+
+Task find out BMI using JS
+
+for loops
+
+** for of loop used to iterate values in Arrays
+    for in loop used to iterate the index values
+    for in loop can used in Objects but not for of loop to objects.
+
+Objects
+

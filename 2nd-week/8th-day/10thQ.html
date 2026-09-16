@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Number generator function</title>
+  </head>
+  <body>
+    <h1>Random no generator</h1>
+
+    <label for="min">Enter the Minimum value</label>
+    <input type="number" id="min" />
+
+    <br />
+    <label for="max">Enter the Maximum value</label>
+    <input type="number" name="" id="max" />
+
+    <br />
+    <label for="submit"></label>
+    <input
+      type="submit"
+      name=""
+      id="submit"
+      onclick="randomNumberGenerator()"
+    />
+
+    <br />
+    <label for="result">result</label>
+    <input type="number" name="" id="result" />
+
+    <script>
+      function randomNumberGenerator() {
+        let min = Number(document.getElementById("min").value);
+        let max = Number(document.getElementById("max").value);
+
+        result = Math.floor(Math.random() * (max - min + 1)) + min;
+        console.log(result);
+
+        document.getElementById("result").value = result;
+      }
+    </script>
+  </body>
+</html>
