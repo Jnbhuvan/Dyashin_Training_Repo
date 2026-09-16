@@ -47,3 +47,9 @@ Destructuring
 
 Extracting the key values by destructuring
 
+-------------------------------------------------------------------
+
+Casing in JS
+
+Camel casing   - firstName - variable Functions
+pascal casing  - 
