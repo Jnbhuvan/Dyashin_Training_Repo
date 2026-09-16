@@ -1,0 +1,422 @@
+
+Assignment 2
+
+------------------------------------------------------------------------------------
+1. Difference between == & ===?
+Answer: The core difference between == and === in JavaScript is that == (loose equality) compares only values after performing type coercion, while === (strict equality) compares both the value and the data type without converting
+
+------------------------------------------------------------------------------------
+2. Calculate the BMI & print the retsults using ternary operator and if else statements.
+Ans:
+
+function findBMI(event) {
+        event.preventDefault();
+
+        let w = document.getElementById("weight");
+        let h = document.getElementById("height");
+
+        let heightInMeters = h.value / 100;
+
+        let bmi = w.value / (heightInMeters * heightInMeters);
+
+        let result =
+          bmi < 16
+            ? "Severe Thinness"
+            : bmi < 17
+              ? "Moderate Thinness"
+              : bmi < 18.5
+                ? "Mild Thinness"
+                : bmi < 25
+                  ? "Normal"
+                  : bmi < 30
+                    ? "Overweight"
+                    : bmi < 35
+                      ? "Obese Class 1"
+                      : bmi < 40
+                        ? "Obese Class 2"
+                        : "Obese Class 3";
+
+        document.getElementById("bmi").innerText =
+          "BMI: " + bmi + " - " + result;
+      }
+
+
+----------------------------------------------------------------------------------
+
+3. Five examples using for in loop, for of loop - Array & objects
+Answer:
+
+FOR IN LOOP
+
+Example 1: Array Index
+
+let fruits = ["Apple", "Banana", "Mango"];
+
+for (let index in fruits) {
+console.log(index);
+}
+
+Example 2: Array Values
+
+let fruits = ["Apple", "Banana", "Mango"];
+
+for (let index in fruits) {
+console.log(fruits[index]);
+}
+
+Example 3: Object Keys
+
+let student = {
+name: "Bhuvan",
+age: 20,
+course: "BCA"
+};
+
+for (let key in student) {
+console.log(key);
+}
+
+Example 4: Object Keys and Values
+
+let student = {
+name: "Bhuvan",
+age: 20,
+course: "BCA"
+};
+
+for (let key in student) {
+console.log(key + " : " + student[key]);
+}
+
+Example 5: Array Total
+
+let numbers = [10, 20, 30, 40];
+
+let total = 0;
+
+for (let index in numbers) {
+total = total + numbers[index];
+}
+
+console.log(total);
+
+FOR OF LOOP
+
+Example 1: Array Values
+
+let fruits = ["Apple", "Banana", "Mango"];
+
+for (let fruit of fruits) {
+console.log(fruit);
+}
+
+Example 2: Numbers in Array
+
+let numbers = [10, 20, 30, 40];
+
+for (let number of numbers) {
+console.log(number);
+}
+
+Example 3: Calculate Total
+
+let numbers = [10, 20, 30, 40];
+
+let total = 0;
+
+for (let number of numbers) {
+total = total + number;
+}
+
+console.log(total);
+
+Example 4: String Characters
+
+let name = "Bhuvan";
+
+for (let character of name) {
+console.log(character);
+}
+
+Example 5: Array of Objects
+
+let students = [
+{ name: "Bhuvan", age: 20 },
+{ name: "Rahul", age: 21 },
+{ name: "Kiran", age: 19 }
+];
+
+for (let student of students) {
+console.log(student.name);
+}
+
+IMPORTANT:
+
+for...in = gives INDEX in arrays and KEY in objects.
+
+for...of = gives VALUE directly from arrays and strings.
+
+----------------------------------------------------------------------------
+
+4. What is Callback function? Write an example.
+Answer:
+Callback Function
+
+A callback function is a function that is passed as an argument to another function and is executed later.
+
+Example:
+function greet(name, callback) {
+    console.log("Hello " + name);
+    callback();
+}
+
+function message() {
+    console.log("Welcome to JavaScript");
+}
+
+greet("Bhuvan", message);
+
+Output:
+Hello Bhuvan
+Welcome to JavaScript
+
+-------------------------------------------------------------------------------------
+
+5. Whats the use of Callback function
+Answer:
+A callback function in JavaScript is a function that you pass as an argument into another function, which is then executed (or "called back") inside that outer function to complete an action. Because functions are "first-class citizens" in JavaScript, they can be treated like any other variable—meaning they can be passed around, assigned, and returned
+
+
+-------------------------------------------------------------------------------------
+6. Whats Hoisting with Example.
+Answer:
+
+Hoisting is a JavaScript behavior where variable and function declarations are moved to the top of their scope before the code is executed.
+
+Example:
+
+console.log(name);
+
+var name = "Bhuvan";
+
+Output:
+undefined
+
+Here, the declaration of name is hoisted to the top, but its value is assigned only when the code reaches var name = "Bhuvan";.
+
+Another example with a function:
+
+greet();
+
+function greet() {
+console.log("Hello Bhuvan");
+}
+
+Output:
+Hello Bhuvan
+
+Function declarations can be called before they are written because they are hoisted.
+
+-------------------------------------------------------------------------------------
+7. List & explain wierd js things.
+Answer:
+JavaScript has some behaviors that may look strange or unexpected.
+
+Adding Number and String
+
+console.log(5 + "5");
+
+Output:
+55
+
+JavaScript converts the number 5 into a string and joins them together.
+
+Subtracting String from Number
+
+console.log("10" - 5);
+
+Output:
+5
+
+JavaScript converts the string "10" into a number before subtraction.
+
+true and false with Numbers
+
+console.log(true + true);
+
+Output:
+2
+
+In JavaScript, true is treated as 1 and false is treated as 0 when used in mathematical operations.
+
+Empty Array
+
+console.log([] + []);
+
+Output:
+""
+
+Two empty arrays are converted into empty strings and then joined.
+
+Null and Number
+
+console.log(null + 5);
+
+Output:
+5
+
+JavaScript converts null to 0 when used in a mathematical operation.
+
+Equality (==) vs Strict Equality (===)
+
+console.log(5 == "5");
+console.log(5 === "5");
+
+Output:
+true
+false
+
+== compares values after type conversion, while === compares both value and data type.
+
+typeof null
+
+console.log(typeof null);
+
+Output:
+"object"
+
+This is a historical behavior in JavaScript. Although null represents the absence of a value, typeof null returns "object".
+
+NaN
+
+console.log("Hello" - 5);
+
+Output:
+NaN
+
+NaN means "Not a Number". It occurs when a mathematical operation cannot produce a valid number.
+
+These behaviors happen mainly because JavaScript performs automatic type conversion and has some historical language behaviors.
+
+-------------------------------------------------------------------------------------
+
+8. WAP to find prime numbers or not using names & anonymous functions.
+Answer:
+    i. named functions:
+    function findPrime(n){
+        if(n<=1){
+            return;
+        }
+        else{
+            for( let i = 0; i < num; i++){
+                if (n%i==0){
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+
+    ii. Anonymous function
+    let findPrime = (n)=>{
+        if(n<=1){
+            return;
+        }
+        else{
+            for( let i = 0; i < num; i++){
+                if (n%i==0){
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+
+-------------------------------------------------------------------------------------
+
+9. WAP for bubble sort algorithm using named & anonymous function.
+Answer:
+
+    function bubbleSort(arr){ 
+
+        for( let i = 0; i < arr.length; i++){
+            for(let j=0; j<arr.length-i-1; j++){
+                if(arr[j]>arr[j+1]){
+                    let temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1]=temp;
+                }
+            }
+        }
+        return arr;
+    }
+
+    let bubbleSort = (arr)=>{
+             for( let i = 0; i < arr.length; i++){
+            for(let j=0; j<arr.length-i-1; j++){
+                if(arr[j]>arr[j+1]){
+                    let temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1]=temp;
+                }
+            }
+        }
+        return arr;
+    }   
+
+
+-------------------------------------------------------------------------------------
+10. Write a Program to reverse a String using named & anonymous function.
+Ans.
+
+    function reverseString(strData) or let reverseString = (strData)=>{
+        return strData.split('').reverse().join('');
+    }
+
+-------------------------------------------------------------------------------------
+
+11. Write a Program to find the second largest value from an Array using Anonymous & Named function.
+Ans.
+
+    function secondLargestArrValue(arr) or let secondLargestArrValue = (arr) =>{
+        return arr.sort()[arr.length - 2];
+    }
+
+--------------------------------------------------------------------------------------
+12. WAP to factorial of a number using named and anonymous function.
+Ans:
+
+    function factorial(n){
+        return n<=1 ? 1: n * factorial(n-1)
+    }
+
+--------------------------------------------------------------------------------------
+13. Fibonacci Series
+Ans:
+
+    function fibonacci(n){
+        return n<=1 ? n: fibonacci(n-1) + fibonacci(n-2)
+    }
+
+-------------------------------------------------------------------------------------------
+
+14. Reverse the string using for loop "Hello my name is Raju"
+Ans:
+
+    function wordsReverseWithFor(str){
+        
+        let reverse = [];
+
+        for(w in str.split(' ')){
+            reverse.push(w.split('').reverse().join(''))
+        }
+        
+        return reverse.join(" ")
+
+    }
+
+-----------------------------------------------------------------------------------------
+
+15. Explain Math Object with Methods in JS.
+Answer:
+    
