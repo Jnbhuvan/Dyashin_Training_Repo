@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Methods</title>
+  </head>
+  <body>
+    <script>
+      let str = "hello world";
+
+      console.log(str.length);
+      console.log(str.charAt(4));
+      console.log(str.at(-4)); //accepts both +ve and -ve arguments
+      console.log(str.charCodeAt(4)); //return character code value through index
+      console.log(str.indexOf("h"));
+      console.log(str.substring(2, 5));
+      console.log(str.slice(2, 5));
+      console.log(str.trim());
+
+      let str1 = "                   Good Morning               ";
+      console.log(str1);
+      console.log(str1.trim());
+      console.log(str1.trimStart());
+      console.log(str1.trimEnd());
+
+      console.log(str1.split(" "));
+      console.log(str1.replace("lo", "LO"));
+      console.log(str1.replaceAll("l", "L"));
+
+      console.log(str1.concat(str1));
+      console.log(str.toLowerCase(str1));
+      console.log(str1.toUpperCase(str1));
+
+      console.log(str1.includes("lg"));
+      console.log(str.startsWith("He"));
+      console.log(str.endsWith("ld"));
+
+      console.log(str.padStart(20, "hh "));
+      console.log(str.padEnd(20, "hg"));
+      console.log(str.repeat(4));
+    </script>
+  </body>
+</html>
