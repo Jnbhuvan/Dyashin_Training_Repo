@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object methods in JS practice</title>
+  </head>
+  <body>
+    <script>
+      let person = {
+        name: "Trump",
+        age: "80",
+        address: {
+          City: "NY",
+          Country: "US",
+        },
+      };
+
+      let newobj = new Object();
+      // let obj1 = {}
+
+      console.log(newobj);
+      let obj1 = Object.create(person);
+      obj1.name = "Biden";
+      console.log(obj1);
+
+      console.log(Object.keys(person));
+      console.log(Object.values(obj1));
+      console.log(Object.entries(person));
+
+      console.log(Object.freeze(obj1));
+      obj1.age = 85;
+      obj1.eyecolor = "Black";
+      console.log("obj1", obj1);
+      console.log(Object.isFrozen(obj1));
+
+      console.log(Object.seal(person));
+      person.age = 87;
+      person.eyecolor = "Blue";
+      console.log("Person", person);
+      console.log(Object.isSealed(person));
+    </script>
+  </body>
+</html>
