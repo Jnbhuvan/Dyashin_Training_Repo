@@ -4,3 +4,12 @@
 
 Javascript String Methods.
 
+String Methods 
+Array Methods  
+Object Methods
+forEach vs map 
+slice vs splice 
+
+
+Task: Array Methods
+filter, find, some, every, findIndex, fill, copyWithin, toSpliced
