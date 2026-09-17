@@ -419,4 +419,44 @@ Ans:
 
 15. Explain Math Object with Methods in JS.
 Answer:
-    
+The Math object in JavaScript is a built-in object used to perform mathematical operations.
+    1. Math.round()
+    console.log(Math.round(4.6)); //output 5
+    console.log(Math.round(4.4)); //output 4
+
+    2. Math.floor()
+    console.log(Math.floor(4.9)); //output 4
+    console.log(Math.floor(4.1)); //output 4
+
+    3. Math.ceil()
+    console.log(Math.ceil(4.1));
+    console.log(Math.ceil(4.9));
+
+    4. Math.trunc()
+    console.log(Math.trunc(4.9));
+    console.log(Math.trunc(7.123));
+
+    5. Math.sqrt()
+    console.log(Math.sqrt(25));
+    console.log(Math.sqrt(64));
+
+    6. Math.pow()
+    Returns a number raised to a power.
+    console.log(Math.pow(2, 3));
+    Output: 8
+
+    7. Math.abs()
+    console.log(Math.abs(-10)); //10
+    console.log(Math.abs(10)); //10
+
+    8. Math.max()
+    Returns the largest number.
+    console.log(Math.max(10, 20, 5, 30));
+
+    9. Math.min()
+    Returns the smallest number.
+    console.log(Math.min(10, 20, 5, 30));
+
+    10. Math.random()
+    Returns a random number between 0 (inclusive) and 1 (exclusive).
+    console.log(Math.random()); 
