@@ -460,3 +460,4 @@ The Math object in JavaScript is a built-in object used to perform mathematical 
     10. Math.random()
     Returns a random number between 0 (inclusive) and 1 (exclusive).
     console.log(Math.random()); 
+

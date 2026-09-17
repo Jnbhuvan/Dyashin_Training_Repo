@@ -49,7 +49,10 @@ Extracting the key values by destructuring
 
 -------------------------------------------------------------------
 
-Casing in JS
+Casing in JS Naming Convetion
 
 Camel casing   - firstName - variable Functions
-pascal casing  - 
+pascal casing  - FirstName
+kebab case     - first-name
+snake case     - first_name 
+
