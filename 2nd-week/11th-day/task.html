@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Task Completion 1</h1>
+    <h3>kindly check the console</h3>
+    <p>by - BHUVAN J N</p>
+    <script>
+      function countWordFreq(str) {
+        let d = [];
+        let words = {};
+        for (let c of str) {
+          d.push(c);
+          if (Object.keys(words).includes(c)) {
+            words[c] += 1;
+          } else {
+            words[c] = 1;
+          }
+        }
+        for (let w in words) {
+          if (words[w] == 1) {
+            return w;
+          }
+        }
+      }
+      console.log(countWordFreq("swiss"));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maps And methods in JS</title>
+  </head>
+  <body>
+    <h1>Map methods in JS</h1>
+    <h3>kindly check the console</h3>
+    <p>by - BHUVAN J N</p>
+
+    <script>
+      let newMap = new Map();
+      newMap.set("fname", "John");
+      newMap.set(10, "age");
+
+      console.log("newMap", newMap);
+      console.log("newMap.get(10)", newMap.get(10));
+      console.log(newMap.has("fname"));
+      console.log("newMap.delete(10)", newMap.delete(10));
+      console.log("newMap.size", newMap.size);
+      console.log("newMap.clear()", newMap.clear());
+      console.log(newMap);
+    </script>
+  </body>
+</html>

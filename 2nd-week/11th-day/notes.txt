@@ -1,0 +1,65 @@
+------------------------------------------------
+18th/September/2026 Friday
+------------------------------------------------
+
+----------------------------------------------------------------- 
+Brushing up with JS Array methods, Object Methods & String Methods
+
+Task completion:
+1. Return the first non repeating character from a block of string. (task.html)
+2. Return the missing no from the sequence of Array items number.   (task2.html)
+
+-----------------------------------------------------------------
+Sets and Set methods in JS:
+Methods:    set.add()
+            set.has('')
+            set.delete('')
+            set.clear()
+            set.size
+
+------------------------------------------------------------------
+Maps in JS and Map methods
+
+------------------------------------------------------------------
+Local Storage & Session Storage methods in Browser console
+
+Commands:
+-> localStorage.setItem("fName","John")
+undefined
+
+localStorage.getItem("fName")
+'John'
+
+localStorage.setItem("person", JSON.stringify({name:"David"}))
+undefined
+
+localStorage.getItem("person")
+'{"name":"David"}'
+
+JSON.parse(localStorage.getItem("person"))
+{name: 'David'}
+
+localStorage.removeItem("age")
+undefined
+
+sessionStorage.setItem("name","Bhuvi")
+undefined
+
+sessionStorage.getItem("name")
+'Bhuvi'
+
+sessionStorage.clear()
+undefined
+
+localStorage.clear()
+undefined
+
+------------------------------------------------------------------------
+
+Call Stack, Web API, Call Back queue Working  
+
+---------------------------------------------------------------------------
+
+Completed and practiced all the assignments given.
+
+--------------------------------------------------------------------------

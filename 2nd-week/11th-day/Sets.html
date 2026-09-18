@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sets</title>
+  </head>
+  <body>
+    <h1>Set methods in JS</h1>
+    <h3>kindly check the console</h3>
+    <p>by - BHUVAN J N</p>
+    <script>
+      let newSet = new Set();
+
+      newSet.add("Hello");
+      newSet.add(" ");
+      newSet.add("World");
+
+      console.log(newSet);
+
+      console.log(newSet.has("Hello"));
+      console.log(newSet.delete("world"));
+      console.log(newSet);
+
+      console.log(newSet.size);
+      console.log(newSet.clear());
+      console.log(newSet);
+    </script>
+  </body>
+</html>
