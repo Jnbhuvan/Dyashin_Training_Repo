@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A9</title>
+  </head>
+  <body>
+    <h1>Assignemt 9 Completion of 17th/september/2026</h1>
+    <h3>kindly check the console</h3>
+    <p>by - BHUVAN J N</p>
+    <script>
+      function generatePrimeNo(start, end) {
+        let prime = [];
+        for (let i = start; i <= end; i++) {
+          let isPrime = true;
+
+          if (i < 2) {
+            isPrime = false;
+          }
+          for (let j = 2; j < i; j++) {
+            if (i % j === 0) {
+              isPrime = false;
+              break;
+            }
+          }
+          if (isPrime) {
+            prime.push(i);
+          }
+        }
+        return prime;
+      }
+      console.log("generatePrimeNo(20,40)", generatePrimeNo(20, 40));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A11</title>
+  </head>
+  <body>
+    <h1>Assignemt 11 Completion of 17th/september/2026</h1>
+    <h3>kindly check the console</h3>
+    <p>by - BHUVAN J N</p>
+
+    <script>
+      function objKeySum(arrObj) {
+        let result = {};
+
+        for (let obj of arrObj) {
+          for (let key in obj) {
+            if (result[key]) {
+              result[key] += obj[key];
+            } else {
+              result[key] = obj[key];
+            }
+          }
+        }
+        return result;
+      }
+      let obj = [
+        {
+          a: 10,
+          b: 20,
+          c: 30,
+        },
+        {
+          d: 20,
+          a: 10,
+          c: 30,
+        },
+      ];
+
+      console.log(objKeySum(obj));
+    </script>
+  </body>
+</html>

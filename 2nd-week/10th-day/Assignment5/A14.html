@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let obj = {
+        a: {
+          b: 2,
+          c: {
+            d: 3,
+            e: {
+              f: 4,
+            },
+          },
+        },
+      };
+
+      let result = [];
+
+      function findNumbers(obj) {
+        for (let key in obj) {
+          if (typeof obj[key] === "number") {
+            result.push({ [key]: obj[key] });
+          } else if (typeof obj[key] === "object") {
+            findNumbers(obj[key]);
+          }
+        }
+      }
+
+      findNumbers(obj);
+
+      console.log(result);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Assignemt 13 Completion of 17th/september/2026</h1>
+    <h3>kindly check the console</h3>
+    <p>by - BHUVAN J N</p>
+
+    <script>
+      function bubbleSort(arr) {
+        for (let i = 0; i < arr.length; i++) {
+          for (let j = 0; j < arr.length - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+              let t = arr[j];
+              arr[j] = arr[j + 1];
+              arr[j + 1] = t;
+            }
+          }
+        }
+        return arr;
+      }
+
+      console.log(bubbleSort([22, 33, 11, 54, 8, 3]));
+    </script>
+  </body>
+</html>

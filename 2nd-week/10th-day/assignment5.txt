@@ -1,0 +1,291 @@
+
+1. let arr = ['a','b','c','a','b']
+o/p = {a:2, b:2, c:1, d:1}
+Ans:
+
+function findCharCounts(str) {
+        let words = {};
+        for (s of str) {
+          if (Object.keys(words).includes(s)) {
+            words[s] += 1;
+          } else {
+            words[s] = 1;
+          }
+        }
+        return words;
+      }
+      console.log(findCharCounts(["a", "b", "c", "d", "a", "b"]));
+
+-------------------------------------------------------------------------------
+
+2. WAP to remove the duplicates from the above array.
+let arr = ['a','b','c','d','a','b']
+o/p = [a,b,c,d]
+
+Ans:
+function removeDuplicates(arr) {
+        let t = [];
+        for (let a of arr) {
+          if (t.includes(a)) {
+            continue;
+          } else {
+            t.push(a);
+          }
+        }
+        return t;
+      }
+      console.log(removeDuplicates(["a", "b", "c", "d", "a", "b"]));
+
+---------------------------------------------------------------------------------
+
+3. WAP to get Duplicates from an array.
+let arr = ['a','b','c','d','a','b']
+o/p = [a,b]
+
+Ans:
+     function getDuplicates(arr) {
+        let t = [];
+        let d = [];
+        for (let a of arr) {
+          if (t.includes(a)) {
+            d.push(a);
+          } else {
+            t.push(a);
+          }
+        }
+        return d;
+      }
+      console.log(
+        "getDuplicates(['a','b','c','d','a','b'])",
+        getDuplicates(["a", "b", "c", "d", "a", "b"]),
+      );
+
+---------------------------------------------------------------------------------
+
+4. let n = '' || "abc" || null;
+console.log(n) // outputs abc 
+why?
+Ans:
+In JavaScript, the logical OR (||) operator evaluates expressions from left to right and returns the first truthy value it encounters.
+
+'' (Empty string): This is a falsy value. Because it is falsy, the || operator ignores it and moves to the next expression.
+"abc" (Non-empty string): This is a truthy value. As soon as the operator finds a truthy value, it stops evaluating any further expressions (this is called short-circuit evaluation).
+null: This value is never even looked at because the operation already found its result.
+
+------------------------------------------------------------------------------------
+
+5. Write a function that takes two strings and returns true if they are anagrams of each other, and
+false otherwise. Two strings are considered anagrams if they have the same characters, but in a different order eg => console.log(areAnagrams ('listen', 'silent')); // true
+console.log(areAnagrams ('triangle', 'integral')); // true
+console.log(areAnagrams ('apple', 'pale')); // false
+Ans:
+  function isAnagram(str1, str2) {
+        return (
+          str1.split("").sort().join("") === str2.split("").sort().join("")
+        );
+      }
+      console.log(isAnagram("triangle", "integral"));
+
+---------------------------------------------------------------------------------------
+
+7. How to deep flatten an array in JavaScript?
+ function deepFlatten(arr) {
+        let result = [];
+        for (let a of arr) {
+          if (Array.isArray(a)) {
+            result = result.concat(deepFlatten(a));
+          } else {
+            result.push(a);
+          }
+        }
+        return result;
+      }
+      console.log(deepFlatten([10, 20, [30, 40], [[50, 60]], [[[77, 44]]]]));
+
+-----------------------------------------------------------------------------------------
+8. let arr = ["apple","mango","kiwi"]
+o/p = ['aPple','mAngo','kIwi']
+Ans:
+function secondCapitalize(arr) {
+        let result = [];
+        for (let a of arr) {
+          result.push(a[0] + a[1].toUpperCase() + a.slice(2));
+        }
+        return result;
+      }
+      console.log(secondCapitalize(["apple", "mango", "kiwi"]));
+
+------------------------------------------------------------------------------------
+9. WAP to find prime numbers between 20 to 40:
+Ans:
+  function generatePrimeNo(start, end) {
+        let prime = [];
+        for (let i = start; i <= end; i++) {
+          let isPrime = true;
+
+          if (i < 2) {
+            isPrime = false;
+          }
+          for (let j = 2; j < i; j++) {
+            if (i % j === 0) {
+              isPrime = false;
+              break;
+            }
+          }
+          if (isPrime) {
+            prime.push(i);
+          }
+        }
+        return prime;
+      }
+      console.log("generatePrimeNo(20,40)", generatePrimeNo(20, 40));
+
+----------------------------------------------------------------------------------------
+
+10. WAP to print number from 1 to 100 where if its divisible by 3 print "sprite" or "coke" for 5 divisibility, if divisible by both then print "fanta"
+Ans:
+  function printJuiceFrom1to100() {
+        for (let i = 3; i < 100; i++) {
+          if (i % 15 == 0) {
+            console.log("Fanta");
+          } else {
+            if (i % 3 == 0) {
+              console.log("Sprite");
+            }
+            if (i % 5 == 0) {
+              console.log("Coke");
+            }
+          }
+        }
+      }
+
+
+-------------------------------------------------------------------------------------
+
+11. I/p let arrObjects = [
+  {
+    a: 10,
+    b: 20,
+    c: 30
+  },
+  {
+    d: 20,
+    a: 10,
+    c: 30
+  }
+];
+O/P: [ { a: 20, b: 20, c: 60, d: 20 } ]
+
+Ans:
+  function objKeySum(arrObj) {
+        let result = {};
+
+        for (let obj of arrObj) {
+          for (let key in obj) {
+            if (result[key]) {
+              result[key] += obj[key];
+            } else {
+              result[key] = obj[key];
+            }
+          }
+        }
+        return result;
+      }
+      let obj = [
+        {
+          a: 10,
+          b: 20,
+          c: 30,
+        },
+        {
+          d: 20,
+          a: 10,
+          c: 30,
+        },
+      ];
+
+      console.log(objKeySum(obj));
+
+------------------------------------------------------------------------------------
+
+12. WAP to find the factorial of a number.
+Ans:
+   function factorial(n) {
+        return n <= 1 ? n : factorial(n - 1) * n;
+      }
+      console.log("factorial(10)", factorial(10));
+
+-------------------------------------------------------------------------------------
+
+13. WAP to sort without using sort()
+Ans:
+ function bubbleSort(arr) {
+        for (let i = 0; i < arr.length; i++) {
+          for (let j = 0; j < arr.length - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+              let t = arr[j];
+              arr[j] = arr[j + 1];
+              arr[j + 1] = t;
+            }
+          }
+        }
+        return arr;
+      }
+
+      console.log(bubbleSort([22, 33, 11, 54, 8,3]));
+
+  14. What is recursion?
+  Ans:
+  Recursion in JavaScript is a programming technique where a function calls itself to solve a problem. 
+
+  The Base Case: The exit condition that stops the function from calling itself.
+  The Recursive Case: The part of the function where it calls itself, passing in a slightly modified or smaller input to move closer to the base case.
+
+  15. I/P:
+  let obj = {
+  a: {
+    b: 2,
+    c: {
+      d: 3,
+      e: {
+        f: 4
+      }
+    }
+  }
+};
+
+o/p:
+[{ b: 2 }, { d: 3 }, { f: 4 }]
+
+
+  let obj = {
+  a: {
+    b: 2,
+    c: {
+      d: 3,
+      e: {
+        f: 4
+      }
+    }
+  }
+};
+
+let result = [];
+
+function findNumbers(obj) {
+  for (let key in obj) {
+
+    if (typeof obj[key] === "number") {
+      result.push({ [key]: obj[key] });
+    }
+
+    else if (typeof obj[key] === "object") {
+      findNumbers(obj[key]);
+    }
+  }
+}
+
+findNumbers(obj);
+
+console.log(result);
+

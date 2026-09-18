@@ -1,0 +1,126 @@
+Assignment 3
+---------------------------------------------------------------
+
+1. Convert "hello world" into "Hello World"
+function capitalize(str) {
+        let result = [];
+        for (let word of str.split(" ")) {
+          let temp = word.split("");
+          temp[0] = temp[0].toUpperCase();
+          result.push(temp.join(""));
+        }
+        return result.join(" ");
+      }
+      console.log(capitalize("hello world"));
+
+-----------------------------------------------------------------
+2. Write a function that returns the numbers of words in "I love Javascript".
+Ans:
+function countWords(sen) {
+  let count = 0;
+
+  for (let s of sen.split(" ")) {
+    if (s === "") {
+      continue;
+    } else {
+      count += 1;
+    }
+  }
+  return count;
+}
+console.log(countWords("I love      Javascript"));
+
+----------------------------------------------------------------------
+3. Convert "my name is John" into "my-name-is-John".
+Ans:
+function replace(str) {
+        return str.split(" ").join("-");
+      }
+      console.log(replace("my name is John"));
+
+-----------------------------------------------------------------------
+4. From "programming", print duplicate characters(like r,g,m)
+Ans:
+function findDuplicates(str) {
+  const counts = {};
+  for (let char of str) {
+    counts[char] = (counts[char] || 0) + 1;
+  }
+  
+  const duplicates = Object.keys(counts).filter(char => counts[char] > 1);
+  return duplicates;
+}
+
+console.log(findDuplicates("programming")); 
+// Output: [ 'r', 'g', 'm' ]
+
+-------------------------------------------------------------------------
+5. From "John Doe Smith", return "JDS".
+Ans:
+
+      function returnCapitals(str) {
+        let c = [];
+        for (s of str.split(" ")) {
+          c.push(s[0]);
+        }
+        return c.join("");
+      }
+      console.log(returnCapitals("John Doe Smith"));
+
+--------------------------------------------------------------------------
+6. Find Longest word find the longest word in a sentence(word separated by spaces).
+Ans:
+  function largestWord(str) {
+        let c = 0;
+        let largest;
+        for (s of str.split(" ")) {
+          if (c <= s.length) {
+            largest = s;
+            c = s.length;
+          }
+        }
+        return largest;
+      }
+      console.log(
+        largestWord(
+          "The quick brown fox but the largest word is YouCan'tfind",
+        ),
+      );
+
+--------------------------------------------------------------------------------
+7. Remove Duplicates Remove Duplicate characters from a string, keeping only the first occurrence
+Ans:
+  function removeDuplicateChars(str) {
+        let c = [];
+        for (s of str.split("")) {
+          if (c.includes(s)) {
+            continue;
+          } else {
+            c.push(s);
+          }
+        }
+        return c.join("");
+      }
+      console.log(removeDuplicateChars("programming"));
+
+
+------------------------------------------------------------------------------------
+8. Count Word Frequency Count how many times each word appears in a string.
+Ans:
+
+  function countWordFreq(str) {
+        let words = {};
+        for (let s of str.split(" ")) {
+          if (Object.keys(words).includes(s)) {
+            words[s] += 1;
+          } else {
+            words[s] = 1;
+          }
+        }
+        return words;
+      }
+      console.log(countWordFreq("hello world hello"));
+
+-------------------------------------------------------------------------------------
+
+

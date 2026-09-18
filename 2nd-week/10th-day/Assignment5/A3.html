@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A3</title>
+  </head>
+  <body>
+    <h1>Assignemt 3 Completion of 17th/september/2026</h1>
+    <h3>kindly check the console</h3>
+    <p>by - BHUVAN J N</p>
+
+    <script>
+      function getDuplicates(arr) {
+        let t = [];
+        let d = [];
+        for (let a of arr) {
+          if (t.includes(a)) {
+            d.push(a);
+          } else {
+            t.push(a);
+          }
+        }
+        return d;
+      }
+      console.log(
+        "getDuplicates(['a','b','c','d','a','b'])",
+        getDuplicates(["a", "b", "c", "d", "a", "b"]),
+      );
+    </script>
+  </body>
+</html>

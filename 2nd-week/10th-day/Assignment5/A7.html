@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flatten An array</title>
+  </head>
+  <body>
+    <h1>Assignemt 7 Completion of 17th/september/2026</h1>
+    <h3>kindly check the console</h3>
+    <p>by - BHUVAN J N</p>
+    <script>
+      function deepFlatten(arr) {
+        let result = [];
+        for (let a of arr) {
+          if (Array.isArray(a)) {
+            result = result.concat(deepFlatten(a));
+          } else {
+            result.push(a);
+          }
+        }
+        return result;
+      }
+      console.log(deepFlatten([10, 20, [30, 40], [[50, 60]], [[[77, 44]]]]));
+    </script>
+  </body>
+</html>

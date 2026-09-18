@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Assignemt Completion of 17th/september/2026</h1>
+    <h3>kindly check the console</h3>
+    <h3>To remove the</h3>
+    <p>by - BHUVAN J N</p>
+    <script>
+      function findCharCounts(str) {
+        let words = {};
+        for (s of str) {
+          if (Object.keys(words).includes(s)) {
+            words[s] += 1;
+          } else {
+            words[s] = 1;
+          }
+        }
+        return words;
+      }
+      console.log(findCharCounts(["a", "b", "c", "d", "a", "b"]));
+    </script>
+  </body>
+</html>
