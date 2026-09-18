@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A6</title>
+  </head>
+  <body>
+    <h1>Assignemt Completion of 17th/september/2026</h1>
+    <h3>kindly check the console</h3>
+    <p>by - BHUVAN J N</p>
+    <script>
+      function largestWord(str) {
+        let c = 0;
+        let largest;
+        for (s of str.split(" ")) {
+          if (c <= s.length) {
+            largest = s;
+            c = s.length;
+          }
+        }
+        return largest;
+      }
+      console.log(
+        largestWord("The quick brown fox but the largest word is YouCan'tfind"),
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A4</title>
+  </head>
+  <body>
+    <h1>Assignemt Completion of 17th/september/2026</h1>
+    <h3>kindly check the console</h3>
+    <p>by - BHUVAN J N</p>
+    <script>
+      function findDuplicates(str) {
+        const counts = {};
+        for (let char of str) {
+          counts[char] = (counts[char] || 0) + 1;
+        }
+
+        const duplicates = Object.keys(counts).filter(
+          (char) => counts[char] > 1,
+        );
+        return duplicates;
+      }
+
+      console.log(findDuplicates("programming"));
+      // Output: [ 'r', 'g', 'm' ]
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finding no of words</title>
+  </head>
+  <body>
+    <h1>Assignemt Completion of 17th/september/2026</h1>
+    <h3>kindly check the console</h3>
+    <p>by - BHUVAN J N</p>
+    <script>
+      function countWords(sen) {
+        let count = 0;
+        console.log(sen.split(" "));
+
+        for (s of sen.split(" ")) {
+          console.log(s);
+          if (s === "") {
+            continue;
+          } else {
+            count += 1;
+          }
+        }
+        return count;
+      }
+      console.log(countWords("I love      Javascript"));
+    </script>
+  </body>
+</html>
