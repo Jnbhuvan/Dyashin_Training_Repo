@@ -56,14 +56,28 @@
         })
         .finally();
 
+      //all, allSetteled, race any
+      Promise.all([promise1, promise2])
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          console.log(data);
+        });
 
-        Promise.all([promise1, promise2])
-        .then((response)=>{
-            return response.json();
-        })
-        .then((data)=>{
-            console.log(data);
-        })
+      //async and await
+      async function fetchUsers(url) {
+        try {
+          let response = await fetch(url);
+          let data = await response.json();
+          console.log(data);
+        } catch (error) {
+          console.log(error);
+        } finally {
+          console.log("promise completed ");
+        }
+      }
+      fetchUsers(url);
     </script>
   </body>
 </html>
