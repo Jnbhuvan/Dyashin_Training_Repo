@@ -13,3 +13,7 @@ Promise.allSettled() → waits for all promises; never rejects because of an ind
 Promise.race() → settles as soon as the first promise settles (resolve or reject).
 
 Promise.any() → resolves as soon as the first promise fulfills; rejects only if all promises reject (AggregateError).
+
+async and await concepts 
+
+promises and setTimeOut WebAPIs and call stack working effects
