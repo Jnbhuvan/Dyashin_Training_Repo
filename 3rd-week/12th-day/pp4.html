@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PP4</title>
+  </head>
+  <body>
+    <h1>Promises practice 4</h1>
+    <h2>Promises allSettled</h2>
+    <h3>By BHUVAN JN</h3>
+    <p>check console kindly</p>
+
+    <script>
+      let a = new Promise((res, rej) => {
+        res("a");
+      });
+
+      let b = new Promise((res, rej) => {
+        res("b");
+      });
+
+      let c = new Promise((res, rej) => {
+        res("c");
+      });
+
+      Promise.allSettled([a, b, c]).then((result) => {
+        console.log(result);
+      });
+    </script>
+  </body>
+</html>
