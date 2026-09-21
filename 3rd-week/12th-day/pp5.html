@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise race</title>
+  </head>
+  <body>
+    <h1>Promises practice 5</h1>
+    <h2>Promises Race</h2>
+    <h3>By BHUVAN JN</h3>
+    <p>check console kindly</p>
+
+    <script>
+      let a = new Promise((res, rej) => {
+        setTimeout(() => res("a"), 2000);
+      });
+
+      let b = new Promise((res, rej) => {
+        setTimeout(() => res("b"), 12000);
+      });
+
+      let c = new Promise((res, rej) => {
+        setTimeout(() => res("c"), 1500);
+      });
+
+      Promise.race([a, b, c]).then((result) => {
+        console.log(result);
+      });
+    </script>
+  </body>
+</html>
