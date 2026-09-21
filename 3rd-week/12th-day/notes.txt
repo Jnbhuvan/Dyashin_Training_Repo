@@ -1,1 +1,15 @@
 21st/September/2026 Monday (12)
+
+Promises
+
+task research on promise methods:
+
+all, allsettles, race, any resolve, reject
+
+Promise.all() → resolves when all promises resolve; rejects if any one rejects.
+
+Promise.allSettled() → waits for all promises; never rejects because of an individual promise. Returns each status (fulfilled/rejected).
+
+Promise.race() → settles as soon as the first promise settles (resolve or reject).
+
+Promise.any() → resolves as soon as the first promise fulfills; rejects only if all promises reject (AggregateError).
