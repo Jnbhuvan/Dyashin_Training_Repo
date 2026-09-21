@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promises-practice</title>
+  </head>
+  <body>
+    <h1>Promises Practice</h1>
+    <p>by BHUVAN JN</p>
+    <p>Kindly check the browser console</p>
+    <script>
+      let simplePromise = new Promise((resolve, reject) => {
+        let a = 5;
+        let b = 3;
+
+        if (a + b === 10) {
+          resolve("Success");
+        } else {
+          reject("Failed");
+        }
+      });
+
+      simplePromise
+        .then((result) => {
+          console.log("Result", result);
+        })
+        .catch((result) => {
+          console.log("Result", result);
+        });
+    </script>
+  </body>
+</html>
