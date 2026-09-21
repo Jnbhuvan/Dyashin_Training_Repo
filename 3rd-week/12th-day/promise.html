@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promises practice</title>
+  </head>
+  <body>
+    <h1>Promises Practice</h1>
+    <h3>Kindly check in the console</h3>
+    <p>- BHUVAN JN</p>
+    <script>
+      let promise = new Promise((resolve, reject) => {
+        let age = 2;
+        if (age > 18) {
+          resolve("Eligible to vote");
+        } else {
+          reject("Not eligible to vote");
+        }
+      });
+
+      promise
+        .then((resolve) => {
+          console.log(resolve);
+          new Promise();
+        })
+        .catch((reject) => {
+          console.log(reject);
+        })
+        .finally(() => {
+          console.log("Promise settled");
+        });
+
+      let url = "https://jsonplaceholder.typicode.com/users";
+
+      let promise1 = new Promise((resolve, reject) => {
+        let response = fetch(url);
+
+        if (response) {
+          resolve(response);
+        } else {
+          reject(response);
+        }
+      });
+
+      promise1 //promise chaining
+        .then((response) => {
+          console.log(response);
+          return response.json();
+        })
+        .then((data) => {
+          console.log("data", data);
+        })
+        .catch((reject) => {
+          console.log(reject);
+        })
+        .finally();
+
+
+        Promise.all([promise1, promise2])
+        .then((response)=>{
+            return response.json();
+        })
+        .then((data)=>{
+            console.log(data);
+        })
+    </script>
+  </body>
+</html>
