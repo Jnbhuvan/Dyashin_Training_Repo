@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promises Any</title>
+  </head>
+  <body>
+    <h1>Promises any</h1>
+
+    <p>by BHUVAN J N</p>
+    <script>
+      let a = new Promise((res, rej) => {
+        setTimeout(() => {
+          res("a");
+        }, 3000);
+      });
+
+      let b = new Promise((res, rej) => {
+        setTimeout(() => {
+          res("b");
+        }, 1000);
+      });
+
+      let c = new Promise((res, rej) => {
+        setTimeout(() => {
+          res("c");
+        }, 2500);
+      });
+
+      Promise.any([a, b, c]).then((result) => {
+        console.log(result);
+      });
+    </script>
+  </body>
+</html>
