@@ -1,6 +1,8 @@
 21st/September/2026 Monday (12)
 
 Promises
+Promise is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+It helps you write cleaner asynchronous code without deeply nested callbacks (the "callback hell" problem).
 
 task research on promise methods:
 
@@ -17,3 +19,5 @@ Promise.any() → resolves as soon as the first promise fulfills; rejects only i
 async and await concepts 
 
 promises and setTimeOut WebAPIs and call stack working effects
+
+Pracitced Promises
