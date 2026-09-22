@@ -72,7 +72,7 @@ Ans:
 Ans:
   function largestWord(str) {
         let c = 0;
-        let largest;
+        let largest="";
         for (s of str.split(" ")) {
           if (c <= s.length) {
             largest = s;
