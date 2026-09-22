@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>countItemFreq</title>
+  </head>
+  <body>
+    <h1>Count item freq</h1>
+    <h3>by BHUVAN JN</h3>
+    <script>
+      function countItemFreq(arr) {
+        let obj = {};
+        for (let a of arr) {
+          if (obj[a]) {
+            obj[a] += 1;
+          } else {
+            obj[a] = 1;
+          }
+        }
+        return obj;
+      }
+
+      console.log(
+        countItemFreq(["apple", "mango", "apple", "orange", "mango", "apple"]),
+      );
+    </script>
+  </body>
+</html>
