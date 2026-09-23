@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check Palindrome</title>
+  </head>
+  <body>
+    <h1></h1>
+    <h1>Assignment 2.2.4</h1>
+    <h3>CountDigits</h3>
+
+    <h3>by BHUVAN JN</h3>
+
+    <script>
+      function countDigits(num) {
+        let count = 0;
+        num = Math.abs(num);
+        while (num > 0) {
+          count++;
+          num = Math.floor(num / 10);
+        }
+        return count;
+      }
+      console.log(countDigits(12345876876875));
+    </script>
+  </body>
+</html>

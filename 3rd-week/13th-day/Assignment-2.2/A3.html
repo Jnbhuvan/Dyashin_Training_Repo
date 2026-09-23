@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reverse a given integer</title>
+  </head>
+  <body>
+    <h1></h1>
+    <h1>Assignment 2.2.3</h1>
+    <h3>Using a while loop, reverse a given integer</h3>
+
+    <h3>by BHUVAN JN</h3>
+    <script>
+      function reverseInteger(n) {
+        let remainder = 0;
+        let result = 0;
+        while (n != 0) {
+          remainder = n % 10;
+          result = result * 10 + remainder;
+          n = Math.floor(n / 10);
+        }
+        return result;
+      }
+      console.log(reverseInteger(1234));
+    </script>
+  </body>
+</html>

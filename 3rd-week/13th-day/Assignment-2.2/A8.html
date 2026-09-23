@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Use a loop and if else to check if a number is a prime or not</title>
+  </head>
+  <body>
+    <h1>Use a loop and if else to check if a number is a prime or not</h1>
+    <h2>Assignment 2.2.8</h2>
+
+    <h3>by BHUVAN JN</h3>
+
+    <script>
+      function checkPrime(n) {
+        let isPrime = false;
+        if (n <= 1) {
+          return isPrime;
+        }
+        for (let i = 2; i < n; i++) {
+          if (n % i === 0) {
+            return isPrime;
+          }
+        }
+        return true;
+      }
+      console.log(checkPrime(1));
+    </script>
+  </body>
+</html>

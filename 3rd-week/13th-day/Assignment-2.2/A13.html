@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math.pow()</title>
+  </head>
+  <body>
+    <h1>Find Power of number</h1>
+    <h2>Assignment 2.2.13</h2>
+    <h3>by BHUVAN JN</h3>
+    <script>
+      function findPower(n, e) {
+        let p = n;
+        for (let i = 1; i < e; i++) {
+          p *= n;
+        }
+        return p;
+      }
+
+      console.log(findPower(3, 5));
+    </script>
+  </body>
+</html>

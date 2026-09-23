@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leap Year</title>
+  </head>
+  <body>
+    <h1>Check an year is a leap year or not</h1>
+    <h2>Assignment 2.2.11</h2>
+    <h4>by BHUVAN JN</h4>
+    <script>
+      function checkLeapYear(y) {
+        if (y % 400 === 0) {
+          return true;
+        }
+        if (y % 4 === 0 && !(y % 100 === 0)) {
+          return true;
+        }
+        return false;
+      }
+      console.log(checkLeapYear(2001));
+    </script>
+  </body>
+</html>

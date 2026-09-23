@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find-Sum</title>
+  </head>
+  <body>
+    <h1></h1>
+    <h1>Assignment 2.2.5</h1>
+    <h3>Find Sum of digits using while loop and % operator</h3>
+
+    <h3>by BHUVAN JN</h3>
+
+    <script>
+      function findSumOfDigits(n) {
+        let sum = 0;
+        n = Math.abs(n);
+        while (n > 0) {
+          sum = sum + (n % 10);
+          n = Math.floor(n / 10);
+        }
+        return sum;
+      }
+      console.log("findSumOfDigits(12345)", findSumOfDigits(12345));
+    </script>
+  </body>
+</html>

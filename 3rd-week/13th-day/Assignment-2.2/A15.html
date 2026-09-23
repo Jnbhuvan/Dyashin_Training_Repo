@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Count Even and Odd digits within it</title>
+  </head>
+  <body>
+    <h1>Count Even and Odd digits within it</h1>
+    <h3>Assignment 2.2.15</h3>
+    <h3>by BHUVAN J N</h3>
+
+    <script>
+      function countOddEvenDigits(num) {
+        let odd = 0;
+        let even = 0;
+        for (let n of num.toString().split("")) {
+          if (parseInt(n) % 2 === 0) {
+            even++;
+          } else {
+            odd++;
+          }
+        }
+        console.log("Odd number:", odd);
+        console.log("Even numbers:", even);
+      }
+      countOddEvenDigits(12345677);
+    </script>
+  </body>
+</html>
