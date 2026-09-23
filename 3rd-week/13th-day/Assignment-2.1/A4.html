@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mutate city in object</title>
+  </head>
+  <body>
+    <h1></h1>
+    <h1>Assignment 2.1.4</h1>
+    <h3>
+      Given a user object, update only the city field without mutating the
+      original object.
+    </h3>
+
+    <h3>by BHUVAN JN</h3>
+
+    <script>
+      function updateCity(obj, city) {
+        // let obj2 = obj;
+        // obj2["city"] = city;
+        // return obj2;
+        return { ...obj, city: city };
+      }
+      let obj = {
+        name: "bhuvi",
+        city: "mysore",
+      };
+
+      console.log(updateCity(obj, "bengaluru"));
+    </script>
+  </body>
+</html>

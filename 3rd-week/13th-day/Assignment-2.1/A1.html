@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object-merge</title>
+  </head>
+  <body>
+    <h1>assignment 2.1.1</h1>
+    <h1>Object merge JS program</h1>
+    <h3>
+      Given two objects, merge them into one. If boht objects have the same key,
+      the second objects value should overrride the first
+    </h3>
+    <p>by BHUVAN JN</p>
+    <script>
+      function objectMerge(obj1, obj2) {
+        // let m = {}
+        for (let o2 in obj2) {
+          obj1[o2] = obj2[o2];
+        }
+        return obj1;
+      }
+
+      console.log(
+        objectMerge({ name: "a", age: 8, add: 123 }, { name: "b", age: 10 }),
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sum-function</title>
+  </head>
+  <body>
+    <h1>Assignment 2.1.2</h1>
+    <h3>
+      Create a funciton that can accept any number of arguments and return their
+      sum
+    </h3>
+
+    <h3>by BHUVAN JN</h3>
+
+    <script>
+      function valSum(...num) {
+        let sum = 0;
+        for (let n of num) {
+          sum += n;
+        }
+        return sum;
+      }
+
+      console.log(valSum(1, 2, 3, 4, 5, 5, 80));
+    </script>
+  </body>
+</html>

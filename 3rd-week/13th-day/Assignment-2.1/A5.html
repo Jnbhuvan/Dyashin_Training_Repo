@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=z, initial-scale=1.0" />
+    <title>Array_converter</title>
+  </head>
+  <body>
+    <h1></h1>
+    <h1>Assignment 2.1.5</h1>
+    <h3>
+      Write a function that atkes one mandatory parameter and any number of
+      additional values, then returns all values as a single array.
+    </h3>
+
+    <h3>by BHUVAN JN</h3>
+
+    <script>
+      function arrayConvertor(a, ...num) {
+        // return num;
+        num.unshift(a);
+        return num;
+      }
+
+      console.log(arrayConvertor(1, 2, 3, 4, 5));
+    </script>
+  </body>
+</html>
