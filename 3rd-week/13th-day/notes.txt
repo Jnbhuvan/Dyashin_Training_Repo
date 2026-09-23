@@ -1,2 +1,26 @@
 22nd September 2026 Tuesday (13th day)
 
+Task 1 and 2 coding problems were given
+
+Task completion with example:
+Types of scopes(global, functional, block)
+lexical environment
+closures
+execution context
+this keyword
+call, apply, bind
+
+Macro tasks vs micro tasks
+
+optional chaining
+
+obj.address.pincode
+obj?.company?.name
+
+
+window object
+histroy method used in web browser live demonstration
+location
+
+
+Completed the Assignment Tasks 2.1 and 2.2 given completely
