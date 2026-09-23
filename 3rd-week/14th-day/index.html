@@ -8,18 +8,41 @@
   <body>
     <script>
       function secondLargest(arr) {
-        let max = Math.max(...arr);
-        let mx = max;
-        while (arr.includes(mx)) {
+        // if(arr)
+        console.log(arr);
+
+        // let mx = max;
+        let distinct = [];
+        let t = [];
+        for (let a of arr) {
+          if (distinct.includes(a)) {
+            t.push(a);
+          } else {
+            distinct.push(a);
+          }
+        }
+        console.log(t);
+        console.log(distinct);
+        for (let T of t) {
           for (let i = 0; i < arr.length; i++) {
-            if (arr[i] === mx) {
+            if (arr[i] == T) {
               arr[i] = 0;
             }
           }
         }
+        let max = Math.max(...arr);
+        console.log(arr);
+
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] === max) {
+            arr[i] = 0;
+          }
+        }
         return Math.max(...arr);
       }
-      console.log(secondLargest([1, 20, 20, 30, 40, 40]));
+      console.log(
+        secondLargest([1, 20, 20, 30, 30, 40, 40, 50, 50, 60, 55, 55]),
+      );
     </script>
   </body>
 </html>
