@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Derive Duplicates</title>
+  </head>
+  <body>
+    <h1>Deriving duplicates from the given array</h1>
+    <h3>Assignment 2.3.1</h3>
+    <h3>by BHUVAN JN</h3>
+    <script>
+      function deriveDuplicates(arr) {
+        let t = [];
+        let d = [];
+        for (let a of arr) {
+          if (!t.includes(a)) {
+            t.push(a);
+          } else {
+            d.push(a);
+          }
+        }
+        return d;
+      }
+      console.log(deriveDuplicates([1, 1, 2, 2, 3, 3, 5]));
+    </script>
+  </body>
+</html>
