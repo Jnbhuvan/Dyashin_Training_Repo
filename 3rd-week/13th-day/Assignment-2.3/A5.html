@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Group anagrams</title>
+  </head>
+  <body>
+    <h1>Group anagrams</h1>
+    <h2>Assignment 2..3.5</h2>
+    <h3>by BHUVAN JN</h3>
+    <script>
+      function groupAnagrams(arr) {
+        let result = [];
+        for (let j = 0; j < arr.length; j++) {
+          if (arr[j] === "") {
+            continue;
+          }
+          let t = [arr[j]];
+          for (let i = 0; i < arr.length; i++) {
+            console.log(t);
+            console.log(arr);
+
+            if (checkAnagrams(arr[j], arr[i]) && i !== j) {
+              t.push(arr[i]);
+              arr[i] = "";
+            }
+          }
+          arr[j] = "";
+          result.push([t]);
+        }
+        return result;
+      }
+      function checkAnagrams(str1, str2) {
+        return (
+          str1.split("").sort().join("") === str2.split("").sort().join("")
+        );
+      }
+
+      console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]));
+    </script>
+  </body>
+</html>
