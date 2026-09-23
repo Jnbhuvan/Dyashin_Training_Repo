@@ -1,0 +1,185 @@
+22nd/September/2026 Tuesday
+
+
+---------------------------------------------------------------------------
+Q1. Types of scopes, global, functional, block
+Ans:
+Scope in JavaScript defines where a variable can be accessed or used within a program. It controls the visibility and lifetime of variables across different parts of the code.
+
+1. Global scope
+A global variable refers to a variable that is declared outside any function or block, so it can be used anywhere in the program, both inside functions and in the main code.
+
+Example:
+// Global Variable accessed from within a function 
+const x = 10;
+
+function fun1() {
+    console.log(x);
+}
+
+fun1();
+
+2. Block Scope:
+Block scope in JavaScript means variables declared with let or const inside { } are accessible only within that block, and accessing them before declaration (TDZ) causes a ReferenceError.
+
+Example:
+{
+    
+    // Var can Accessible inside & outside the block scope 
+    var x = 10;
+    
+    // let , const Accessible only inside the block scope
+    const y = 20;
+    let z = 30;
+    
+    console.log(x);
+    console.log(y);
+    console.log(z);
+}
+
+console.log(x);
+
+3. Local Scope/ Functional Scope:
+A local variable is a variable declared within a function, making it accessible only inside that function. It cannot be used outside the function. Variables declared inside a block using let or const are block-scoped.
+example:
+function fun2(){
+    
+    // This variable is local to fun2() and 
+    // cannot be accessed outside this function
+    let x = 10;
+    console.log(x);
+}
+
+fun2();
+
+---------------------------------------------------------------------------------------------
+
+Q2. Lexical environment:
+Ans:
+
+A lexical environment in JavaScript is an internal data structure that manages variable scope and function access. The term "lexical" means "related to the text or physical location of the code." In short, JavaScript determines which variables a function can access based entirely on where that function was written in the source code, not where it is called at runtime
+
+Global Scope: Variables defined outside any function or block, accessible anywhere in the program.
+Local Scope: Variables defined inside a function or block, accessible only within that specific function or block.
+Nested Scope: Inner functions have access to variables in their parent functions.
+Block Scope: Variables defined with let and const are limited to the block they are declared in, like loops or conditionals.
+
+-------------------------------------------------------------------------------------------
+
+Q3. Closure:
+Ans:
+JAVASCRIPT CLOSURES
+
+Definition:
+A closure is created when a function remembers and can access
+variables from its outer lexical scope even after the outer
+function has finished executing.
+
+Example:
+
+function outer() {
+    let x = 10;
+
+    return function inner() {
+        console.log(x);
+    };
+}
+
+const fn = outer();
+
+fn(); // 10
+
+Here, inner() forms a closure over the variable x.
+
+Key Points:
+1. Closures are created because of lexical scoping.
+2. An inner function can access variables of its outer function.
+3. A closure can retain access to those variables even after
+   the outer function has finished execution.
+4. Closures are commonly used with callbacks, event handlers,
+   timers and data privacy.
+5. Each execution of the outer function can create a separate
+   closure with its own variables.
+
+Common Example:
+
+function counter() {
+    let count = 0;
+
+    return function () {
+        count++;
+        return count;
+    };
+}
+
+const increment = counter();
+
+console.log(increment()); // 1
+console.log(increment()); // 2
+console.log(increment()); // 3
+
+Uses of Closures:
+- Data hiding / encapsulation
+- Counters
+- Callbacks
+- Event handlers
+- setTimeout / asynchronous code
+- Maintaining state
+- Function factories
+
+Important:
+Closure is not a keyword or special syntax.
+It is a behavior of functions caused by lexical scoping.
+
+-----------------------------------------------------------------------------------------
+Q4. Execution context
+Ans:
+JavaScript Execution Context — Short Notes
+Execution Context = the environment in which JavaScript code is executed.
+
+It keeps track of variables, functions, scope, and this.
+
+JavaScript mainly has:
+
+Global Execution Context → created when the JS program starts.
+
+Function Execution Context → created whenever a function is called.
+
+Execution contexts are managed using the Call Stack.
+
+When a function finishes, its execution context is removed from the stack.
+
+Easy way to remember
+Execution Context = Everything JS needs to run a piece of code.
+
+Global Context
+      ↓
+Function Call
+      ↓
+Function Context
+      ↓
+Function finishes → Context removed
+
+------------------------------------------------------------------------------------
+
+Q5. this keyword
+Ans:
+
+In JavaScript, this depends on how a function is called , it may refer to an object, global object, or be undefined (in strict mode), and its value is determined at runtime based on how the function is invoked.
+
+this dynamically refers to the calling object, not where the function is defined
+It is used to access an object’s properties and methods
+Enables flexible, reusable, and context-aware code
+
+
+const person = {
+    name: "GeeksforGeeks",
+    greet() {
+        return `Welcome To, ${this.name}`;
+    }
+};
+console.log(person.greet());
+
+
+Q6. call, apply, bind
+Ans
