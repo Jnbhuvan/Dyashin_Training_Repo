@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arm Strong number</title>
+  </head>
+  <body>
+    <img src="image.png" alt="" />
+    <script>
+      function armstrongNo(num) {
+        let sum = 0;
+        for (let n of num.toString().split("")) {
+          let t = 1;
+          n = parseInt(n);
+          t = n ** 3;
+          sum += t;
+        }
+        return sum === num;
+      }
+      console.log(armstrongNo(113));
+    </script>
+  </body>
+</html>
