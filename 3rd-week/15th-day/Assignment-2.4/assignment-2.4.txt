@@ -1,0 +1,213 @@
+Assignment 2.4
+---------------------------------------------------------
+
+1. String Methods Examples.
+Answer:
+JavaScript String Methods
+1. length
+Returns the number of characters in a string.
+It is a property, so you don't use ().
+
+let str = "Hello";
+console.log(str.length); // 5
+
+2. toUpperCase()
+Converts all characters in the string to uppercase.
+It does not modify the original string.
+
+let str = "hello";
+console.log(str.toUpperCase()); // "HELLO"
+
+3. toLowerCase()
+Converts all characters in the string to lowercase.
+Useful when comparing strings without considering case.
+
+let str = "HELLO";
+console.log(str.toLowerCase()); // "hello"
+
+4. charAt()
+Returns the character at a specified index.
+String indexes start from 0.
+
+let str = "Hello";
+console.log(str.charAt(1)); // "e"
+
+5. at()
+Returns the character at a specified index.
+Unlike charAt(), it also supports negative indexes.
+
+let str = "Hello";
+console.log(str.at(-1)); // "o"
+
+6. indexOf()
+Returns the index of the first occurrence of a value.
+Returns -1 if the value is not found.
+
+let str = "Hello World";
+console.log(str.indexOf("World")); // 6
+
+7. includes()
+Checks whether a string contains a specified value.
+Returns true or false.
+
+let str = "Hello World";
+console.log(str.includes("World")); // true
+
+8. startsWith()
+Checks whether a string starts with a specified value.
+Returns true or false.
+
+let str = "JavaScript";
+console.log(str.startsWith("Java")); // true
+
+9. endsWith()
+Checks whether a string ends with a specified value.
+Returns true or false.
+
+let str = "JavaScript";
+console.log(str.endsWith("Script")); // true
+
+10. slice()
+Extracts a portion of a string.
+It takes a starting index and an optional ending index.
+
+let str = "JavaScript";
+console.log(str.slice(0, 4)); // "Java"
+
+11. substring()
+Extracts characters between two indexes.
+It is similar to slice(), but does not support negative indexes.
+
+let str = "JavaScript";
+console.log(str.substring(0, 4)); // "Java"
+
+12. replace()
+Replaces the first matching value in a string.
+It returns a new string without changing the original.
+
+let str = "Hello World";
+console.log(str.replace("World", "JS")); // "Hello JS"
+
+13. replaceAll()
+Replaces all occurrences of a specified value.
+Useful when the same text appears multiple times.
+
+let str = "Hi Hi Hi";
+console.log(str.replaceAll("Hi", "Hello")); // "Hello Hello Hello"
+
+14. trim()
+Removes whitespace from both the beginning and end.
+It does not remove spaces between words.
+
+let str = "  Hello  ";
+console.log(str.trim()); // "Hello"
+
+15. split()
+Splits a string into an array based on a separator.
+Very useful for converting strings into arrays.
+
+let str = "Apple,Banana,Mango";
+console.log(str.split(","));
+// ["Apple", "Banana", "Mango"]
+
+16. concat()
+Joins two or more strings together.
+The + operator or template literals are more commonly used.
+
+let a = "Hello";
+let b = "World";
+console.log(a.concat(" ", b)); // "Hello World"
+
+17. repeat()
+Repeats a string a specified number of times.
+It returns a new repeated string.
+
+let str = "Hi ";
+console.log(str.repeat(3)); // "Hi Hi Hi "
+
+18. padStart()
+Adds characters to the beginning until the string reaches a given length.
+Often used for formatting numbers or IDs.
+
+let num = "5";
+console.log(num.padStart(3, "0")); // "005"
+
+19. padEnd()
+Adds characters to the end until the string reaches a given length.
+It is similar to padStart() but works from the end.
+
+let num = "5";
+console.log(num.padEnd(3, "0")); // "500"
+
+20. lastIndexOf()
+Returns the index of the last occurrence of a value.
+Returns -1 if it is not found.
+
+let str = "Hello Hello";
+console.log(str.lastIndexOf("Hello")); // 6
+
+
+-----------------------------------------------------------------------
+2. WAP to remove the duplicates from the array
+let arr = ['a','b','c','d','a','b']
+op => ['a','b','c','d']
+
+function remDuplicates(arr) {
+        return [...new Set(arr)];
+      }
+      console.log(remDuplicates(["a", "b", "c", "d", "a", "b"]));
+
+
+-----------------------------------------------------------------------
+3. Examples for spread rest operator for object and array
+Ans:
+// ---------- ARRAY ----------
+
+const numbers = [10, 20, 30];
+
+// SPREAD: take everything OUT
+const newNumbers = [...numbers, 40, 50];
+
+console.log(newNumbers);
+// [10, 20, 30, 40, 50]
+
+
+// REST: collect everything ELSE
+const [first, ...remaining] = newNumbers;
+
+console.log(first);
+// 10
+
+console.log(remaining);
+// [20, 30, 40, 50]
+
+
+
+// ---------- OBJECT ----------
+
+const user = {
+    name: "Rahul",
+    age: 25,
+    city: "Bangalore"
+};
+
+// SPREAD: copy everything INTO a new object
+const updatedUser = {
+    ...user,
+    age: 26
+};
+
+console.log(updatedUser);
+// { name: "Rahul", age: 26, city: "Bangalore" }
+
+
+// REST: collect the remaining properties
+const { name, ...otherDetails } = updatedUser;
+
+console.log(name);
+// "Rahul"
+
+console.log(otherDetails);
+// { age: 26, city: "Bangalore" }
+
+------------------------------------------------------------------------------
