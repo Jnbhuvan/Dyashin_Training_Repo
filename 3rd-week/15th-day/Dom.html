@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Practice & learning</title>
+  </head>
+  <body>
+    <h1 id="greet">Javascript Session</h1>
+
+    <div class="fruits">Apple</div>
+    <div class="fruits">Mango</div>
+    <div class="fruits">kiwi</div>
+    <div class="fruits">Strawberry</div>
+    <script>
+      console.log(document.head);
+      console.log(document.body);
+
+      let greetEle = document.getElementById("greet");
+      greetEle.innerText = "Welcome To JS";
+      greetEle.style.color = "green";
+      greetEle.style.backgroundColor = "aqua";
+
+      let fruitsEle = document.getElementsByClassName("fruits");
+      console.log(fruitsEle);
+
+      fruitsEle[0].innerText = "Watermelon";
+      fruitsEle[3].style.color = "red";
+
+      let divEle = document.getElementByTagName("div");
+      console.log(divEle);
+
+      console.log(document.querySelector("div"));
+      console.log(document.querySelectorAll(".fruits"));
+
+      //image.getAttribute("alt")
+      //image.setAttribute("src","image.png")
+      //image.setAttribute("alt","jdhskf")
+
+      let newEle = document.createElement("p");
+      newEle.innerText = "this is a new Ele";
+
+      console.log(newEle);
+
+      document.body.append(newEle);
+      document.getElementById("new").appendChild(newEle);
+    </script>
+  </body>
+</html>
