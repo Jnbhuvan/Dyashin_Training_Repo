@@ -10,3 +10,7 @@ stopPropogation
 preventDefault
 
 Practiced Event Propogation
+
+Made the Time Clock task dynamic using JS
+
+Completed Assignment 2.4 all questions.
