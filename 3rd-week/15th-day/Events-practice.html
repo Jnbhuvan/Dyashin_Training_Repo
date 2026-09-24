@@ -1,0 +1,126 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+
+    ```
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
+
+    <style>
+      #emailReq,
+      #invalidEmail,
+      #passReq,
+      #invalidPass {
+        color: red;
+        font-size: xx-small;
+        display: none;
+      }
+    </style>
+    ```
+  </head>
+
+  <body>
+    <h1 class="text-center text-warning">Login Form</h1>
+
+    ```
+    <form action="" class="container text-center" name="loginForm">
+      <label>Email</label>
+      <input type="text" name="emailField" />
+
+      <p id="emailReq">Email field is required</p>
+      <p id="invalidEmail">Invalid Email</p>
+
+      <br /><br />
+
+      <label>Password</label>
+      <input type="password" name="password" />
+
+      <p id="passReq">Password field is required</p>
+      <p id="invalidPass">Invalid Password</p>
+
+      <br /><br />
+
+      <button id="submitBtn" class="btn btn-success">Submit</button>
+    </form>
+
+    <script>
+      let btn = document.getElementById("submitBtn");
+
+      btn.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        let form = document.forms["loginForm"];
+
+        let emailValue = form.emailField.value;
+        let passwordValue = form.password.value;
+
+        let isEmailValid = validateEmail(emailValue);
+        let isPasswordValid = validatePassword(passwordValue);
+
+        if (isEmailValid && isPasswordValid) {
+          alert("Form submitted successfully");
+        }
+      });
+
+      function validateEmail(emailValue) {
+        let emailReq = document.getElementById("emailReq");
+        let invalidEmail = document.getElementById("invalidEmail");
+
+        if (!emailValue) {
+          emailReq.style.display = "block";
+          invalidEmail.style.display = "none";
+
+          return false;
+        }
+
+        let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        if (!emailRegex.test(emailValue)) {
+          invalidEmail.style.display = "block";
+          emailReq.style.display = "none";
+
+          return false;
+        }
+
+        emailReq.style.display = "none";
+        invalidEmail.style.display = "none";
+
+        return true;
+      }
+
+      function validatePassword(passwordValue) {
+        let passReq = document.getElementById("passReq");
+        let invalidPass = document.getElementById("invalidPass");
+
+        if (!passwordValue) {
+          passReq.style.display = "block";
+          invalidPass.style.display = "none";
+
+          return false;
+        }
+
+        const passwordRegex =
+          /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+        if (!passwordRegex.test(passwordValue)) {
+          invalidPass.style.display = "block";
+          passReq.style.display = "none";
+
+          return false;
+        }
+
+        passReq.style.display = "none";
+        invalidPass.style.display = "none";
+
+        return true;
+      }
+    </script>
+    ```
+  </body>
+</html>
