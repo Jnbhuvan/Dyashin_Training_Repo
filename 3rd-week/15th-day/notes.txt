@@ -1,2 +1,12 @@
 24th September 2026 Thursday (15th day)
 
+Practiced DOM
+
+PRacticed EVENTS in JS
+
+addEventListener
+querySelector
+stopPropogation
+preventDefault
+
+Practiced Event Propogation
