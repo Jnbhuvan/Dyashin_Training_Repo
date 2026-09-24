@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events in JS</title>
+  </head>
+  <body>
+    <h1 id="greet">Welcome to DOM events</h1>
+    <button id="button">Click me</button>
+
+    <!-- <button id="worst">Try to click me if you dare!!</button> -->
+
+    <input type="text" id="user" />
+    <div id="parent">
+        
+        <button id="child">click me</button>
+
+        </div>
+    </div>
+    <script>
+      let button = document.getElementById("button");
+      let greetEle = document.getElementById("greet");
+
+      button.addEventListener("click", () => {
+        greetEle.style.display = "none";
+      });
+      button.addEventListener("mouseover", () => {
+        greetEle.style.display = "block";
+      });
+
+      let input = document.getElementById("user");
+      input.addEventListener("keydown", (event) => {
+        console.log(event.target.value);
+      });
+
+      document.getElementById("parent").addEventListener("click", () => {
+        console.log("Parent Clicked");
+      });
+
+      document.getElementById("child").addEventListener("click", (event) => {
+        event.stopPropagation();
+        // event.preventDefault();
+        console.log("child clicked");
+      });
+    </script>
+  </body>
+</html>
