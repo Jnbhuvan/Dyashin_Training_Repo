@@ -5,5 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>flatten Arr</title>
   </head>
-  <body></body>
+  <body>
+    <h1>Flatten an Array without using flat method</h1>
+    <h3>Assignment 2.3.4</h3>
+    <h3>BY BHUVAN JN</h3>
+    <script>
+      function flattenArr(arr) {
+        let result = [];
+        for (let a of arr) {
+          if (Array.isArray(a)) {
+            result = result.concat(flattenArr(a));
+          } else {
+            result.push(a);
+          }
+        }
+        return result;
+      }
+
+      console.log(flattenArr([10, 20, [30, 40], [[50, 60]], [[[77, 44]]]]));
+    </script>
+  </body>
 </html>
