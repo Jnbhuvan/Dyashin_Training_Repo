@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check palindrome</title>
+  </head>
+  <body>
+    <h1>Check whether the string is palindrom or not</h1>
+    <h3>Easy level logical questions</h3>
+    <h3>by BHUVAN JN</h3>
+    <script>
+      function isPalindrome(str) {
+        let isPalin = false;
+        let i = 0;
+        let j = str.length - 1;
+        while (i < j) {
+          if (str[i] === str[j]) {
+            isPalin = true;
+            i++;
+            j--;
+            continue;
+          } else {
+            isPalin = false;
+            break;
+          }
+        }
+        return isPalin;
+      }
+      console.log(isPalindrome("bullcar"));
+    </script>
+  </body>
+</html>
