@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reverse a string</title>
+  </head>
+  <body>
+    <h1>Easy level questions</h1>
+    <h3>Reverse a string without using reverse()</h3>
+    <h3>by BHUVAN JN</h3>
+    <script>
+      function strReverse(str) {
+        let rev = "";
+        for (let i = str.length - 1; i >= 0; i--) {
+          rev = rev + str[i];
+        }
+        return rev;
+      }
+      console.log(strReverse("Hello"));
+      console.log(strReverse("Hello"));
+    </script>
+  </body>
+</html>
