@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Count The Frequency of Characters</title>
+  </head>
+  <body>
+    <h1>Count the Frequency of characters</h1>
+    <h3>Medium level logical questions</h3>
+    <h3>by BHUVAN JN</h3>
+    <script>
+      function countCharFreq(str) {
+        let count = {};
+        for (let s of str.split("")) {
+          if (count[s]) {
+            count[s]++;
+          } else {
+            count[s] = 1;
+          }
+        }
+        return count;
+      }
+      console.log(countCharFreq("hello"));
+    </script>
+  </body>
+</html>
