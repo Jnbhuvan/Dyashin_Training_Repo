@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fibonacci series</title>
+  </head>
+  <body>
+    <h1>Print the Fibonacce series</h1>
+    <h3>Easy level logical questions</h3>
+    <h3>by BHUVAN JN</h3>
+    <script>
+      function fibonacci(n) {
+        let a = 0;
+        let b = 1;
+        for (let i = 0; i < n; i++) {
+          console.log(a);
+          [a, b] = [b, a + b];
+        }
+      }
+
+      fibonacci(5);
+    </script>
+  </body>
+</html>
