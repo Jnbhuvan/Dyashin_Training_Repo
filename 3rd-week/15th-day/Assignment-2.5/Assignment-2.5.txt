@@ -1,0 +1,453 @@
+Assignment 2.5 
+By BHUVAN JN
+
+Q1. What is mutable and immutable in JS?
+Ans:
+Mutable means a value can changed or modified once after the variable is defined,
+whereas immutable means a value cannot be changed after once a variable is defined.
+
+Q2. What is shallow copy and deep copy expalin with array and objects example.
+Answer:
+    i. Shallow copy:
+    Creates a new outer array but remaining inner nested object or array are still shared
+
+    ii.DeepCopy:
+    Creates completely independent copies of object, arrays including whole nested objects, arrays
+
+    Example:
+    let a = [10,20,[3,4]]
+    let b = [...a]
+
+    a[0]=100;
+    b[2][0]=300;
+
+    console.log(a[2]===b[2]);
+    //outputs: true;
+
+    Because in memory b[2] and a[2] are the same shared memory values since these are nested inside & aren't copied deeply
+
+    Example:
+    let a = [10,20,[30,40]];
+    let b = structuredClone(a); or JSON.parse(JSON.stringify(a));
+
+    a[0] = 100;
+    b[2][0] = 300;
+    console.log(a[2]===b[2]);
+
+    Shallow Copy with Objects Ex:
+    const person = {
+    name: "John",
+    address: {
+        city: "Bangalore"
+    }
+    };
+
+    const copy = { ...person };
+
+    copy.name = "Alex";
+    copy.address.city = "Mumbai";
+
+    console.log(person);
+
+    op:
+    {
+    name: "John",
+    address: {
+        city: "Mumbai"
+    }
+    }
+
+    DeepCopy Ex with Objects:
+    const person = {
+    name: "John",
+    address: {
+        city: "Bangalore"
+    }
+    };
+
+    const copy = structuredClone(person);
+
+    copy.name = "Alex";
+    copy.address.city = "Mumbai";
+
+    console.log(person);
+
+
+-----------------------------------------------------------------------------------------
+
+Q3. What happens below:
+let n = [10,20,30]
+let n1 = n.slice(0)
+Answer:
+n1 will be stored with values of [10,20,30] in an array format
+
+--------------------------------------------------------------------------------------------
+
+Q4. Give 2 examples for all the discussed Array methods.
+Ans:
+// 1. length
+let fruits = ["Apple", "Banana", "Mango"];
+console.log(fruits.length);
+// Output: 3
+
+
+// 2. unshift()
+fruits.unshift("Orange");
+console.log(fruits);
+// Output: ["Orange", "Apple", "Banana", "Mango"]
+
+
+// 3. shift()
+fruits.shift();
+console.log(fruits);
+// Output: ["Apple", "Banana", "Mango"]
+
+
+// 4. push()
+fruits.push("Grapes");
+console.log(fruits);
+// Output: ["Apple", "Banana", "Mango", "Grapes"]
+
+
+// 5. pop()
+fruits.pop();
+console.log(fruits);
+// Output: ["Apple", "Banana", "Mango"]
+
+
+// 6. slice()
+let sliced = fruits.slice(1, 3);
+console.log(sliced);
+// Output: ["Banana", "Mango"]
+
+
+// 7. splice()
+fruits.splice(1, 1, "Orange");
+console.log(fruits);
+// Output: ["Apple", "Orange", "Mango"]
+
+
+// 8. toString()
+console.log(fruits.toString());
+// Output: Apple,Orange,Mango
+
+
+// 9. join()
+console.log(fruits.join(" - "));
+// Output: Apple - Orange - Mango
+
+
+// 10. reverse()
+fruits.reverse();
+console.log(fruits);
+// Output: ["Mango", "Orange", "Apple"]
+
+
+// 11. forEach()
+fruits.forEach(function (fruit) {
+    console.log(fruit);
+});
+// Output:
+// Mango
+// Orange
+// Apple
+
+
+// 12. map()
+let upperFruits = fruits.map(function (fruit) {
+    return fruit.toUpperCase();
+});
+console.log(upperFruits);
+// Output: ["MANGO", "ORANGE", "APPLE"]
+
+
+// 13. flat()
+let numbers = [1, [2, 3], [4, [5, 6]]];
+console.log(numbers.flat());
+// Output: [1, 2, 3, 4, [5, 6]]
+
+
+// 14. includes()
+console.log(fruits.includes("Orange"));
+// Output: true
+
+
+// 15. indexOf()
+console.log(fruits.indexOf("Orange"));
+// Output: 1
+
+
+// 16. lastIndexOf()
+let colors = ["Red", "Blue", "Green", "Blue"];
+console.log(colors.lastIndexOf("Blue"));
+// Output: 3
+
+
+// 17. Array.isArray()
+console.log(Array.isArray(fruits));
+// Output: true
+
+
+// 18. reduce()
+let nums = [1, 2, 3, 4, 5];
+
+let sum = nums.reduce(function (total, num) {
+    return total + num;
+}, 0);
+
+console.log(sum);
+// Output: 15
+
+
+// 19. reduceRight()
+let words = ["Hello", "World", "!"];
+
+let result = words.reduceRight(function (total, word) {
+    return total + " " + word;
+});
+
+console.log(result);
+// Output: ! World Hello
+
+
+// 20. sort()
+let marks = [50, 20, 80, 10, 40];
+
+marks.sort(function (a, b) {
+    return a - b;
+});
+
+console.log(marks);
+// Output: [10, 20, 40, 50, 80]
+
+
+----------------------------------------------------------------------------------
+Q5. Difference between splice and slice methods in JavaScript
+Ans:
+    slice()                            	   vs              splice()
+Used to extract a portion of an array. vs	Used to add, remove, or replace elements.
+Does not change the original array.    vs	Changes the original array.
+Returns a new array.                   vs	Returns the removed elements.
+Syntax: array.slice(start, end)        vs	Syntax: array.splice(start, deleteCount, items)
+
+example:
+let fruits = ["Apple", "Banana", "Mango", "Orange"];
+
+console.log(fruits.slice(1, 3));
+// Output: ["Banana", "Mango"]
+
+console.log(fruits);
+// Output: ["Apple", "Banana", "Mango", "Orange"]
+
+fruits.splice(1, 2);
+
+console.log(fruits);
+// Output: ["Apple", "Orange"]
+
+-------------------------------------------------------------------------------------
+Q6. Difference between push and unshift()
+Ans:
+
+1. push()
+- Adds one or more elements to the END of an array.
+- Changes the original array.
+- Returns the new length of the array.
+
+Example:
+let fruits = ["Apple", "Banana"];
+
+fruits.push("Mango");
+
+console.log(fruits);
+// Output: ["Apple", "Banana", "Mango"]
+
+
+2. unshift()
+- Adds one or more elements to the BEGINNING of an array.
+- Changes the original array.
+- Returns the new length of the array.
+
+Example:
+let fruits = ["Apple", "Banana"];
+
+fruits.unshift("Mango");
+
+console.log(fruits);
+// Output: ["Mango", "Apple", "Banana"]
+
+
+MAIN DIFFERENCE:
+
+push()    -> Adds elements at the END.
+unshift() -> Adds elements at the BEGINNING.
+
+
+Easy to Remember:
+push() = Add at the back
+unshift() = Add at the front
+
+----------------------------------------------------------------------
+
+Q7. DIFFERENCE BETWEEN pop() AND shift() IN JAVASCRIPT
+
+1. pop()
+- Removes one element from the END of an array.
+- Changes the original array.
+- Returns the removed element.
+
+Example:
+let fruits = ["Apple", "Banana", "Mango"];
+
+fruits.pop();
+
+console.log(fruits);
+// Output: ["Apple", "Banana"]
+
+
+2. shift()
+- Removes one element from the BEGINNING of an array.
+- Changes the original array.
+- Returns the removed element.
+
+Example:
+let fruits = ["Apple", "Banana", "Mango"];
+
+fruits.shift();
+
+console.log(fruits);
+// Output: ["Banana", "Mango"]
+
+
+MAIN DIFFERENCE:
+
+pop()   -> Removes an element from the END.
+shift() -> Removes an element from the BEGINNING.
+
+
+Easy to Remember:
+pop() = Remove from the back
+shift() = Remove from the front
+
+---------------------------------------------------------------------------
+Q8. Explain some(), with(), copyWithin(), & toSpliced() with 2 examples.
+
+1. some()   
+
+- Checks whether at least ONE element in an array satisfies a condition.
+- Returns true or false.
+- Does not change the original array.
+
+Example 1:
+let numbers = [10, 20, 30, 40];
+
+console.log(numbers.some(num => num > 35));
+// Output: true
+
+
+Example 2:
+let ages = [12, 15, 17, 19];
+
+console.log(ages.some(age => age >= 18));
+// Output: true
+
+
+2. with()
+
+- Replaces an element at a specific index.
+- Returns a NEW array.
+- Does not change the original array.
+
+Example 1:
+let fruits = ["Apple", "Banana", "Mango"];
+
+let result = fruits.with(1, "Orange");
+
+console.log(result);
+// Output: ["Apple", "Orange", "Mango"]
+
+
+Example 2:
+let numbers = [10, 20, 30];
+
+let result = numbers.with(2, 50);
+
+console.log(result);
+// Output: [10, 20, 50]
+
+
+3. copyWithin()
+array.copyWithin(target, start, end)
+
+- Copies part of an array to another position in the SAME array.
+- Changes the original array.
+- Does not increase the length of the array.
+
+Original:
+index:  0  1  2  3  4
+value:  1  2  3  4  5
+
+copyWithin(0, 3)
+             ↑     ↑
+           start   end (omitted)
+
+Copy [4, 5] → starting at index 0
+
+Result:
+[4, 5, 3, 4, 5]
+
+
+Example 1:
+let numbers = [1, 2, 3, 4, 5];
+
+numbers.copyWithin(0, 3);
+
+console.log(numbers);
+// Output: [4, 5, 3, 4, 5]
+
+
+Example 2:
+let fruits = ["Apple", "Banana", "Mango", "Orange"];
+
+fruits.copyWithin(1, 2);
+
+console.log(fruits);
+// Output: ["Apple", "Mango", "Orange", "Orange"]
+
+
+4. toSpliced()
+
+- Used to add, remove, or replace elements in an array.
+- Returns a NEW array.
+- Does NOT change the original array.
+- It is the non-mutating version of splice().
+
+Example 1:
+let fruits = ["Apple", "Banana", "Mango"];
+
+let result = fruits.toSpliced(1, 1, "Orange");
+
+console.log(result);
+// Output: ["Apple", "Orange", "Mango"]
+
+console.log(fruits);
+// Output: ["Apple", "Banana", "Mango"]
+
+
+Example 2:
+let numbers = [10, 20, 30, 40];
+
+let result = numbers.toSpliced(1, 2);
+
+console.log(result);
+// Output: [10, 40]
+
+console.log(numbers);
+// Output: [10, 20, 30, 40]
+
+
+EASY TO REMEMBER:
+
+some()       -> Checks if at least ONE element passes a condition.
+with()       -> Replaces an element without changing the original array.
+copyWithin() -> Copies elements within the SAME array.
+toSpliced()  -> Adds/removes/replaces elements without changing the original array.
