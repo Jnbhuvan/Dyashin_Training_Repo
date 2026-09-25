@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remove Duplicates from an array</title>
+  </head>
+  <body>
+    <h1>Remove Duplicates from an array</h1>
+    <h3>Easy level logical questions</h3>
+    <h3>by BHUVAN JN</h3>
+    <script>
+      function removeDuplicates(arr) {
+        return [...new Set(arr)];
+      }
+      console.log(
+        removeDuplicates([1, 1, 2, 2, 3, 3, 4, 4, 4, 4, 5, 5, 6, 7, 8, 8]),
+      );
+    </script>
+  </body>
+</html>
