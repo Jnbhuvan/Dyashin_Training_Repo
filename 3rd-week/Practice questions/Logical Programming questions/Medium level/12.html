@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Missing Number</title>
+  </head>
+  <body>
+    <h1>Find the Missing Number</h1>
+    <h3>Medium level logical questions</h3>
+    <h3>by BHUVAN JN</h3>
+    <script>
+      function findMissingNo(arr) {
+        let i = 1;
+        for (let a of arr) {
+          if (a === i) {
+            i++;
+            continue;
+          } else {
+            return i;
+          }
+        }
+        return true;
+      }
+      console.log(findMissingNo([1, 2, 3, 5, 6]));
+    </script>
+  </body>
+</html>
