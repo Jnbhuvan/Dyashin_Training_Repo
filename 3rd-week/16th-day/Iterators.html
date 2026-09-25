@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iterators Practice</title>
+  </head>
+  <body>
+    <h1>Iterators</h1>
+    <p>
+      Symbol.iterator gives you an iterator, and next() uses that iterator to
+      retrieve values one at a time.
+    </p>
+
+    <script>
+      let numbers = [10, 20, 30, 40];
+      let iterator = numbers[Symbol.iterator]();
+
+      for (let a of numbers) {
+        console.log(iterator.next());
+      }
+    </script>
+  </body>
+</html>

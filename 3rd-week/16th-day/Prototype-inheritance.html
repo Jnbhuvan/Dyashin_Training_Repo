@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prototype inheritance</title>
+  </head>
+  <body>
+    <h1>Prototype inheritance</h1>
+    <p>
+      Prototype inheritance in JavaScript is a built-in mechanism that allows
+      objects to directly inherit properties and methods from other objects.
+    </p>
+    <h3>By BHUVAN JN</h3>
+    <script>
+      let person = {
+        name: "peter",
+        greet() {
+          console.log(`hello, welcome ${this.name}`);
+          console.log(`My age is ${this.age}`);
+        },
+      };
+      let student = Object.create(person);
+      student.greet();
+      student.name = "Jainag Bhuvan";
+      student.age = 22;
+      student.greet();
+    </script>
+  </body>
+</html>

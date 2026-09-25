@@ -1,0 +1,40 @@
+25th September 2026 Thursday (16th day)
+
+------------------------------------------------------------------
+
+Function methods
+Call, apply, bind
+call() → execute now, arguments separately
+
+apply() → execute now, arguments as an array
+
+bind() → create a new function to execute later
+
+
+--------------------------------------------------------------------
+
+Prototype Inheritance:
+
+Prototype inheritance in JavaScript is a built-in mechanism that allows objects to directly inherit properties and methods from other objects.
+ 
+Only works when Object are inherited using Object.create() method;
+
+----------------------------------------------------------------------
+Iterators:
+
+Symbol.iterator gives you an iterator, and next() uses that iterator to retrieve values one at a time.
+
+-----------------------------------------------------------------------
+generator
+
+In JavaScript, generators are special functions that can be paused and resumed later, allowing you to control the flow of execution precisely. Unlike a standard function that runs from start to finish without stopping, a generator can exit and re-enter multiple times, saving its variable states across executions
+
+-------------------------------------------------------------------------
+Debouncing
+
+Debouncing is a performance optimization technique that forces a function to wait a specific amount of time before running. If the event is triggered again before that time is up, the countdown resets. The function will only execute once the user has completely stopped triggering the event.
+
+----------------------------------------------------------------------------
+Throttling
+
+Throttling is a performance optimization technique that limits the maximum number of times a function can run over a given period. It ensures the function executes at regular, predictable intervals (e.g., at most once every 300 milliseconds), completely ignoring any extra triggers in between.

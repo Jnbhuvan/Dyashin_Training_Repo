@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iterators Practice</title>
+  </head>
+  <body>
+    <h1>Generator</h1>
+    <p>
+      In JavaScript, generators are special functions that can be paused and
+      resumed later, allowing you to control the flow of execution precisely.
+      Unlike a standard function that runs from start to finish without
+      stopping, a generator can exit and re-enter multiple times, saving its
+      variable states across executions
+    </p>
+    <script>
+      function* num() {
+        yield 10;
+        yield 20;
+        yield 30;
+      }
+
+      let generator = num();
+
+      console.log(generator.next());
+    </script>
+  </body>
+</html>
