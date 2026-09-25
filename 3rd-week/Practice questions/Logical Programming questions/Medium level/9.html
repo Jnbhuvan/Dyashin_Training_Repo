@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find the Second largest Value</title>
+  </head>
+  <body>
+    <h1>Second Largest Value from an Array</h1>
+    <h3>Medium level logical questions</h3>
+    <h3>by BHUVAN JN</h3>
+    <script>
+      function secondLargestArr(arr) {
+        let max = -Infinity;
+        let sec = -Infinity;
+        for (let a of arr) {
+          if (a > max) {
+            sec = max;
+            max = a;
+          } else {
+            if (a < max && a > sec) {
+              sec = a;
+            }
+          }
+        }
+        return sec;
+      }
+      console.log(secondLargestArr([1, 4, 2, 5, 4, 7]));
+    </script>
+  </body>
+</html>
