@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Count Vowels</title>
+  </head>
+  <body>
+    <h1></h1>
+    <h3>Easy level logical questions</h3>
+    <h3>by BHUVAN JN</h3>
+    <script>
+      function countVowels(str) {
+        let vowels = "aeiou";
+        let count = 0;
+        for (let s of str) {
+          if (vowels.includes(s)) {
+            count++;
+          }
+        }
+        return count;
+      }
+      console.log(countVowels("salute"));
+    </script>
+  </body>
+</html>
