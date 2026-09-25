@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Return Comman values</title>
+  </head>
+  <body>
+    <h1>Return Common values in an Array</h1>
+    <h3>Medium level logical questions</h3>
+    <h3>by BHUVAN JN</h3>
+    <script>
+      function returnCommanVal(arr1, arr2) {
+        let common = [];
+        for (let a of arr1) {
+          if (arr2.includes(a)) {
+            common.push(a);
+          }
+        }
+        return common;
+      }
+      console.log(returnCommanVal([1, 2, 3, 4], [3, 4, 5, 6]));
+    </script>
+  </body>
+</html>
