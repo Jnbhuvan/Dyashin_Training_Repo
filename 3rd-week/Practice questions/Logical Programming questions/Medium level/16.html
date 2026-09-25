@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flatten an array</title>
+  </head>
+  <body>
+    <h1>Flatten array</h1>
+    <h3>Medium level logical questions</h3>
+    <h3>by BHUVAN JN</h3>
+    <script>
+      function flattenArr(arr) {
+        let result = [];
+        for (let a of arr) {
+          if (Array.isArray(a)) {
+            result.push(...flattenArr(a));
+          } else {
+            result.push(a);
+          }
+        }
+        return result;
+      }
+      console.log(flattenArr([1, [2, [3, 4]], 5]));
+    </script>
+  </body>
+</html>
