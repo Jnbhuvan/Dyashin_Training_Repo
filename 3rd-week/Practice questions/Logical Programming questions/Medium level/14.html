@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check Anagrams</title>
+  </head>
+  <body>
+    <h1>Checking Anagrams BestCase</h1>
+    <h3>Medium level logical questions</h3>
+    <h3>by BHUVAN JN</h3>
+    <script>
+      function checkAnagrams(str1, str2) {
+        if (str1.length !== str2.length) {
+          return false;
+        }
+        let count = {};
+        for (let c of str1) {
+          if (count[c]) {
+            count[c]++;
+          } else {
+            count[c] = 1;
+          }
+        }
+
+        for (let c of str2) {
+          if (!count[c]) {
+            return false;
+          } else {
+            count[c]--;
+          }
+        }
+        return true;
+      }
+
+      console.log(checkAnagrams("listean", "silent"));
+    </script>
+  </body>
+</html>
