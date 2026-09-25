@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Push 0 to last</title>
+  </head>
+  <body>
+    <h1>Push 0 to last</h1>
+    <h3>Medium level logical questions</h3>
+    <h3>by BHUVAN JN</h3>
+    <script>
+      function push0ToLast(arr) {
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] === 0) {
+            let j;
+            for (j = i; j < arr.length - 1; j++) {
+              [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+            }
+          }
+        }
+        return arr;
+      }
+      console.log(push0ToLast([0, 1, 0, 3, 12]));
+    </script>
+  </body>
+</html>
