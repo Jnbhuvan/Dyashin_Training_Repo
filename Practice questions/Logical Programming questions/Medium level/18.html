@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sort an Array of object based on heights</title>
+  </head>
+  <body>
+    <h1>Flatten array</h1>
+    <h3>Medium level logical questions</h3>
+    <h3>by BHUVAN JN</h3>
+    <script>
+      function objSort(obj) {
+        let n = obj.length;
+        for (let i = 0; i < n; i++) {
+          for (let j = 0; j < n - i - 1; j++) {
+            if (obj[j].age > obj[j + 1].age) {
+              let t = obj[j];
+              obj[j] = obj[j + 1];
+              obj[j + 1] = t;
+            }
+          }
+        }
+        return obj;
+      }
+      console.log(
+        objSort([
+          { name: "A", age: 30 },
+          { name: "B", age: 20 },
+          { name: "C", age: 25 },
+        ]),
+      );
+      let obj = [
+        { name: "A", age: 30 },
+        { name: "B", age: 20 },
+        { name: "C", age: 25 },
+      ];
+    </script>
+  </body>
+</html>
