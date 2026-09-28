@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Own Implementation of Array.prototype.map</title>
+  </head>
+  <body>
+    <h1>Array.prototype.map own Implementation</h1>
+    <h3>Medium level logical questions</h3>
+    <h3>by BHUVAN JN</h3>
+    <script>
+      function ownMap(arr, callback) {
+        let result = [];
+        for (let i = 0; i < arr.length; i++) {
+          result.push(callback(arr[i]));
+        }
+        return result;
+      }
+      let multiply = (x) => {
+        return x * 2;
+      };
+      console.log(ownMap([1, 2, 3, 4, 5], multiply));
+    </script>
+  </body>
+</html>
