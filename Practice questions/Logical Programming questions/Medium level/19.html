@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using Reduce to convert array of object into objects</title>
+  </head>
+  <body>
+    <h1>Object convertion using Reduce</h1>
+    <h3>Medium level logical questions</h3>
+    <h3>by BHUVAN JN</h3>
+    <script>
+      function reduceObjeConvertion(arr) {
+        const result = arr.reduce((result, item) => {
+          result[item.id] = item;
+          return result;
+        }, {});
+        return result;
+      }
+      console.log(
+        reduceObjeConvertion([
+          { id: 1, name: "A" },
+          { id: 2, name: "B" },
+        ]),
+      );
+    </script>
+  </body>
+</html>
