@@ -4,24 +4,818 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>My Website</title>
+    <title>Awfis - Shared & Co-Working Spaces</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
-  <body class="bg-gray-100">
-    <h1 class="text-4xl font-bold text-blue-600 text-center mt-10">
-      Hello Tailwind!
-    </h1>
+  <body class="bg-white text-gray-900">
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+    <header class="sticky top-0 z-50 bg-black text-white shadow-md">
+      <div class="container mx-auto px-4 sm:px-5">
+        <div class="flex h-16 items-center justify-between">
+          <!-- =========================
+               LOGO
+          ========================== -->
+          <a href="#" class="flex shrink-0 items-center">
+            <img
+              src="../awfis.svg"
+              alt="Awfis logo"
+              class="h-9 w-auto object-contain"
+            />
+          </a>
 
-    <div class="max-w-md mx-auto mt-10 bg-white p-6 rounded-xl shadow-lg">
-      <h2 class="text-2xl font-semibold mb-4">My Card</h2>
+          <!-- =========================
+               DESKTOP NAVIGATION
+          ========================== -->
+          <nav
+            class="hidden md:ml-8 md:flex md:items-center md:border-l md:border-gray-600 md:pl-8"
+          >
+            <!-- =========================
+                 LOCATIONS DROPDOWN
+            ========================== -->
+            <div class="group relative">
+              <!-- Locations Button -->
+              <a
+                href="#"
+                class="mr-6 flex items-center gap-1 text-sm font-semibold text-white transition hover:text-red-400"
+              >
+                LOCATIONS
 
-      <p class="text-gray-600 mb-4">This is styled using Tailwind CSS.</p>
+                <!-- Arrow -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 transition-transform duration-200 group-hover:rotate-180"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </a>
 
-      <button
-        class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700"
+              <!-- =========================
+                   LOCATIONS DROPDOWN
+              ========================== -->
+              <div
+                class="absolute left-0 top-full z-50 hidden w-[300px] overflow-hidden bg-white text-gray-500 shadow-2xl group-hover:block"
+              >
+                <!-- Delhi -->
+                <a
+                  href="#"
+                  class="block border-b border-gray-200 px-5 py-5 text-sm uppercase transition duration-200 hover:bg-gray-50 hover:text-red-500"
+                >
+                  Coworking Space in Delhi
+                </a>
+
+                <!-- Gurgaon -->
+                <a
+                  href="#"
+                  class="block border-b border-gray-200 px-5 py-5 text-sm uppercase transition duration-200 hover:bg-gray-50 hover:text-red-500"
+                >
+                  Coworking Space in Gurgaon
+                </a>
+
+                <!-- Noida -->
+                <a
+                  href="#"
+                  class="block border-b border-gray-200 px-5 py-5 text-sm uppercase transition duration-200 hover:bg-gray-50 hover:text-red-500"
+                >
+                  Coworking Space in Noida
+                </a>
+
+                <!-- Mumbai -->
+                <a
+                  href="#"
+                  class="block border-b border-gray-200 px-5 py-5 text-sm uppercase transition duration-200 hover:bg-gray-50 hover:text-red-500"
+                >
+                  Coworking Space in Mumbai
+                </a>
+
+                <!-- Bengaluru -->
+                <a
+                  href="#"
+                  class="block border-b border-gray-200 px-5 py-5 text-sm uppercase transition duration-200 hover:bg-gray-50 hover:text-red-500"
+                >
+                  Coworking Space in Bengaluru
+                </a>
+
+                <!-- Hyderabad -->
+                <a
+                  href="#"
+                  class="block border-b border-gray-200 px-5 py-5 text-sm uppercase transition duration-200 hover:bg-gray-50 hover:text-red-500"
+                >
+                  Coworking Space in Hyderabad
+                </a>
+
+                <!-- Kolkata -->
+                <a
+                  href="#"
+                  class="block px-5 py-5 text-sm uppercase transition duration-200 hover:bg-gray-50 hover:text-red-500"
+                >
+                  Coworking Space in Kolkata
+                </a>
+              </div>
+            </div>
+
+            <!-- =========================
+                 SOLUTIONS
+            ========================== -->
+            <a
+              href="#"
+              class="mr-6 text-sm font-semibold text-white transition hover:text-red-400"
+            >
+              SOLUTIONS
+            </a>
+
+            <!-- =========================
+                 ENTERPRISE
+            ========================== -->
+            <a
+              href="#"
+              class="mr-6 text-sm font-semibold text-white transition hover:text-red-400"
+            >
+              ENTERPRISE
+            </a>
+
+            <!-- =========================
+                 MEETING ROOMS
+            ========================== -->
+            <a
+              href="#"
+              class="text-sm font-semibold text-white transition hover:text-red-400"
+            >
+              MEETING ROOMS
+            </a>
+          </nav>
+
+          <!-- =========================
+               DESKTOP BUTTONS
+          ========================== -->
+          <div class="hidden md:ml-auto md:flex md:items-center md:gap-3">
+            <!-- Login -->
+            <button
+              type="button"
+              class="inline-flex items-center rounded bg-gray-100 px-4 py-2 text-sm text-black transition hover:bg-gray-200"
+            >
+              Login
+
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="ml-1 h-4 w-4"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </button>
+
+            <!-- Sign Up -->
+            <button
+              type="button"
+              class="inline-flex items-center rounded bg-gray-100 px-4 py-2 text-sm text-black transition hover:bg-gray-200"
+            >
+              Sign Up
+
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="ml-1 h-4 w-4"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- =========================
+               MOBILE MENU BUTTON
+          ========================== -->
+          <button
+            id="mobile-menu-button"
+            type="button"
+            class="inline-flex items-center justify-center rounded-md p-2 text-gray-300 transition hover:bg-gray-800 hover:text-white md:hidden"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="h-6 w-6"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- =========================
+             MOBILE MENU
+        ========================== -->
+        <div
+          id="mobile-menu"
+          class="hidden border-t border-gray-800 pb-4 md:hidden"
+        >
+          <nav class="flex flex-col pt-3">
+            <a href="#" class="rounded px-2 py-2 transition hover:bg-gray-800">
+              Locations
+            </a>
+
+            <a href="#" class="rounded px-2 py-2 transition hover:bg-gray-800">
+              Solutions
+            </a>
+
+            <a href="#" class="rounded px-2 py-2 transition hover:bg-gray-800">
+              Enterprise
+            </a>
+
+            <a href="#" class="rounded px-2 py-2 transition hover:bg-gray-800">
+              Meeting Rooms
+            </a>
+
+            <!-- Mobile Buttons -->
+            <div class="mt-3 flex gap-2">
+              <button
+                type="button"
+                class="flex-1 rounded bg-gray-100 px-3 py-2 text-sm text-black transition hover:bg-gray-200"
+              >
+                Login
+              </button>
+
+              <button
+                type="button"
+                class="flex-1 rounded bg-gray-100 px-3 py-2 text-sm text-black transition hover:bg-gray-200"
+              >
+                Sign Up
+              </button>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- =====================================================
+         HERO SECTION
+    ====================================================== -->
+    <section
+      class="relative overflow-hidden bg-cover bg-center bg-no-repeat"
+      style="background-image: url(&quot;../hero.png&quot;)"
+    >
+      <!-- Background Overlay -->
+      <div class="absolute inset-0 bg-slate-900/45"></div>
+
+      <div
+        class="relative container mx-auto flex min-h-[650px] flex-col items-center gap-12 px-5 py-20 md:flex-row"
       >
-        Click Me
-      </button>
-    </div>
+        <!-- Hero Content -->
+        <div
+          class="mb-10 flex flex-col items-center rounded-2xl bg-white/95 p-8 text-center shadow-2xl backdrop-blur-sm md:mb-0 md:w-1/2 md:items-start md:p-10 md:text-left lg:flex-grow lg:pr-16"
+        >
+          <h1
+            class="mb-5 text-4xl font-bold leading-tight tracking-tight text-gray-900 sm:text-5xl"
+          >
+            India's Largest
+
+            <br class="hidden lg:inline-block" />
+
+            <span class="text-red-500"> Integrated Workspace </span>
+
+            <br class="hidden lg:inline-block" />
+
+            Solutions Platform
+          </h1>
+
+          <p class="mb-8 max-w-xl text-lg leading-relaxed text-gray-600">
+            India's Largest Integrated Workspace Solutions Platform
+          </p>
+        </div>
+
+        <!-- Hero Image -->
+        <div
+          class="relative z-10 flex w-5/6 justify-center p-2 md:w-1/2 md:p-4 lg:w-full lg:max-w-lg lg:translate-x-3"
+        >
+          <img
+            src="../image.png"
+            alt="Awfis workspace"
+            class="h-auto max-h-[550px] w-full rounded-2xl border-4 border-white/80 object-contain object-center shadow-2xl transition-transform duration-500 hover:scale-[0.95]"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         WORKSPACE TYPES
+    ====================================================== -->
+    <section class="flex min-h-screen items-center justify-center px-6 py-16">
+      <div class="w-full max-w-6xl">
+        <!-- Heading -->
+        <h2
+          class="mb-10 text-center text-xl font-medium text-slate-900 md:text-2xl"
+        >
+          Flexible Shared & Coworking Office Spaces Across India
+        </h2>
+
+        <!-- Cards -->
+        <div
+          class="grid grid-cols-1 gap-0 overflow-hidden shadow-lg sm:grid-cols-2 lg:grid-cols-4"
+        >
+          <!-- =========================
+               CARD 1
+          ========================== -->
+          <div
+            class="group relative h-[400px] overflow-hidden border-b-4 border-red-500"
+          >
+            <img
+              src="../images/mumbai.png"
+              alt="Awfis coworking space in Mumbai"
+              class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent"
+            ></div>
+
+            <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+              <div class="mb-4 h-[2px] w-12 bg-white"></div>
+
+              <h3 class="text-lg font-semibold">Coworking</h3>
+            </div>
+          </div>
+
+          <!-- =========================
+               CARD 2
+          ========================== -->
+          <div
+            class="group relative h-[400px] overflow-hidden border-b-4 border-red-500"
+          >
+            <img
+              src="../images/chandigarh.png"
+              alt="Awfis enterprise office space"
+              class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent"
+            ></div>
+
+            <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+              <div class="mb-4 h-[2px] w-12 bg-white"></div>
+
+              <h3 class="text-lg font-semibold">Enterprise</h3>
+            </div>
+          </div>
+
+          <!-- =========================
+               CARD 3
+          ========================== -->
+          <div
+            class="group relative h-[400px] overflow-hidden border-b-4 border-red-500"
+          >
+            <img
+              src="../images/gurgoan.png"
+              alt="Awfis meeting room"
+              class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent"
+            ></div>
+
+            <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+              <div class="mb-4 h-[2px] w-12 bg-white"></div>
+
+              <h3 class="text-lg font-semibold">Mobility</h3>
+            </div>
+          </div>
+
+          <!-- =========================
+               CARD 4
+          ========================== -->
+          <div
+            class="group relative h-[400px] overflow-hidden border-b-4 border-red-500"
+          >
+            <img
+              src="../images/hyderabad.png"
+              alt="Awfis modern office space"
+              class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent"
+            ></div>
+
+            <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+              <div class="mb-4 h-[2px] w-12 bg-white"></div>
+
+              <h3 class="text-lg font-semibold">Awfis Transform</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         GROWING NETWORK
+    ====================================================== -->
+    <section class="body-font text-gray-600">
+      <div class="container mx-auto flex flex-wrap px-5 py-24">
+        <!-- Heading -->
+        <div class="mb-20 flex w-full flex-wrap">
+          <h2
+            class="mb-4 text-2xl font-medium text-gray-900 sm:text-3xl lg:mb-0 lg:w-1/3"
+          >
+            Our Growing Network
+          </h2>
+
+          <p class="mx-auto text-base leading-relaxed lg:w-2/3 lg:pl-6">
+            Our spaces are spread across the nation, offering a wide variety of
+            office spaces and amazing workspaces designed for modern businesses.
+          </p>
+        </div>
+
+        <!-- Gallery -->
+        <div class="flex flex-wrap md:-m-2 -m-1">
+          <!-- Left Column -->
+          <div class="flex w-1/2 flex-wrap">
+            <div class="w-1/2 p-1 md:p-2">
+              <img
+                src="../images/mumbai.png"
+                alt="Awfis Mumbai workspace"
+                class="block h-full w-full object-cover object-center"
+              />
+            </div>
+
+            <div class="w-1/2 p-1 md:p-2">
+              <img
+                src="../images/chandigarh.png"
+                alt="Awfis Chandigarh workspace"
+                class="block h-full w-full object-cover object-center"
+              />
+            </div>
+
+            <div class="w-full p-1 md:p-2">
+              <img
+                src="../images/image.png"
+                alt="Awfis workspace"
+                class="block h-full w-full object-cover object-center"
+              />
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="flex w-1/2 flex-wrap">
+            <div class="w-full p-1 md:p-2">
+              <img
+                src="../images/image2.png"
+                alt="Awfis office interior"
+                class="block h-full w-full object-cover object-center"
+              />
+            </div>
+
+            <div class="w-1/2 p-1 md:p-2">
+              <img
+                src="../images/noida.png"
+                alt="Awfis Noida workspace"
+                class="block h-full w-full object-cover object-center"
+              />
+            </div>
+
+            <div class="w-1/2 p-1 md:p-2">
+              <img
+                src="../images/hyderabad.png"
+                alt="Awfis Hyderabad workspace"
+                class="block h-full w-full object-cover object-center"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+    <footer class="body-font text-gray-600">
+      <div class="container mx-auto px-5 py-24">
+        <div class="flex flex-wrap text-center md:text-left">
+          <!-- =========================
+               ABOUT
+          ========================== -->
+          <div class="w-full px-4 md:w-1/2 lg:w-1/4">
+            <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900">
+              About
+            </h2>
+
+            <nav class="mb-10 list-none">
+              <li>
+                <a href="#" class="text-gray-600 hover:text-gray-800">
+                  About Awfis
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="text-gray-600 hover:text-gray-800">
+                  Press
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="text-gray-600 hover:text-gray-800">
+                  Legal
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="text-gray-600 hover:text-gray-800">
+                  Privacy Policy
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="text-gray-600 hover:text-gray-800"> Blog </a>
+              </li>
+
+              <li>
+                <a href="#" class="text-gray-600 hover:text-gray-800">
+                  Workplace Insights
+                </a>
+              </li>
+            </nav>
+          </div>
+
+          <!-- =========================
+               PRODUCTS
+          ========================== -->
+          <div class="w-full px-4 md:w-1/2 lg:w-1/4">
+            <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900">
+              Products
+            </h2>
+
+            <nav class="mb-10 list-none">
+              <li>
+                <a href="#" class="text-gray-600 hover:text-gray-800">
+                  Space Solutions
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="text-gray-600 hover:text-gray-800">
+                  Coworking
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="text-gray-600 hover:text-gray-800">
+                  Enterprise
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="text-gray-600 hover:text-gray-800">
+                  Meeting Rooms
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="text-gray-600 hover:text-gray-800">
+                  Day Pass
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="text-gray-600 hover:text-gray-800">
+                  Business Address Plan
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="text-gray-600 hover:text-gray-800">
+                  GST Registration Plan
+                </a>
+              </li>
+            </nav>
+          </div>
+
+          <!-- =========================
+               CONTACT
+          ========================== -->
+          <div class="w-full px-4 md:w-1/2 lg:w-1/4">
+            <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900">
+              Contact
+            </h2>
+
+            <nav class="mb-10 list-none">
+              <li>
+                <a href="#" class="text-gray-600 hover:text-gray-800">
+                  Contact Us
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="text-gray-600 hover:text-gray-800">
+                  Request A Visit
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="text-gray-600 hover:text-gray-800">
+                  Find Your Space
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="text-gray-600 hover:text-gray-800">
+                  Investor Relations
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="text-gray-600 hover:text-gray-800">
+                  Sitemap
+                </a>
+              </li>
+            </nav>
+          </div>
+
+          <!-- =========================
+               SUBSCRIBE
+          ========================== -->
+          <div class="w-full px-4 md:w-1/2 lg:w-1/4">
+            <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900">
+              SUBSCRIBE
+            </h2>
+
+            <div
+              class="flex flex-wrap items-end justify-center md:justify-start"
+            >
+              <div class="relative mr-2 w-40 sm:mr-4 sm:w-auto xl:mr-4">
+                <label
+                  for="footer-email"
+                  class="text-sm leading-7 text-gray-600"
+                >
+                  Email
+                </label>
+
+                <input
+                  type="email"
+                  id="footer-email"
+                  name="footer-email"
+                  placeholder="Enter your email"
+                  class="w-full rounded border border-gray-300 bg-gray-100 bg-opacity-50 px-3 py-1 text-base leading-8 text-gray-700 outline-none transition-colors duration-200 ease-in-out focus:border-red-500 focus:bg-transparent focus:ring-2 focus:ring-red-200"
+                />
+              </div>
+
+              <button
+                type="button"
+                class="mt-2 inline-flex flex-shrink-0 rounded border-0 bg-red-500 px-6 py-2 text-white transition hover:bg-red-600 xl:mt-0"
+              >
+                Subscribe
+              </button>
+            </div>
+
+            <p class="mt-2 text-center text-sm text-gray-500 md:text-left">
+              Stay updated with the latest Awfis workspace insights.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================
+           FOOTER BOTTOM
+      ========================== -->
+      <div class="bg-gray-100">
+        <div
+          class="container mx-auto flex flex-col items-center px-5 py-6 sm:flex-row"
+        >
+          <!-- Footer Logo -->
+          <a
+            href="#"
+            class="flex items-center justify-center font-medium text-gray-900 md:justify-start"
+          >
+            <img
+              src="../awfis.svg"
+              alt="Awfis logo"
+              class="h-10 w-auto object-contain"
+            />
+          </a>
+
+          <!-- Copyright -->
+          <p class="mt-4 text-sm text-gray-500 sm:ml-6 sm:mt-0">
+            © 2026 Awfis. All rights reserved.
+          </p>
+
+          <!-- Social Icons -->
+          <span
+            class="mt-4 inline-flex justify-center sm:ml-auto sm:mt-0 sm:justify-start"
+          >
+            <!-- Facebook -->
+            <a
+              href="#"
+              aria-label="Facebook"
+              class="text-gray-500 transition hover:text-gray-800"
+            >
+              <svg fill="currentColor" viewBox="0 0 24 24" class="h-5 w-5">
+                <path
+                  d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                ></path>
+              </svg>
+            </a>
+
+            <!-- Twitter -->
+            <a
+              href="#"
+              aria-label="Twitter"
+              class="ml-3 text-gray-500 transition hover:text-gray-800"
+            >
+              <svg fill="currentColor" viewBox="0 0 24 24" class="h-5 w-5">
+                <path
+                  d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+                ></path>
+              </svg>
+            </a>
+
+            <!-- Instagram -->
+            <a
+              href="#"
+              aria-label="Instagram"
+              class="ml-3 text-gray-500 transition hover:text-gray-800"
+            >
+              <svg
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                class="h-5 w-5"
+              >
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+
+                <path
+                  d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"
+                ></path>
+              </svg>
+            </a>
+
+            <!-- LinkedIn -->
+            <a
+              href="#"
+              aria-label="LinkedIn"
+              class="ml-3 text-gray-500 transition hover:text-gray-800"
+            >
+              <svg fill="currentColor" viewBox="0 0 24 24" class="h-5 w-5">
+                <path
+                  d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+                ></path>
+
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- =====================================================
+         MOBILE MENU JAVASCRIPT
+    ====================================================== -->
+    <script>
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      mobileMenuButton.addEventListener("click", () => {
+        const isHidden = mobileMenu.classList.toggle("hidden");
+
+        mobileMenuButton.setAttribute("aria-expanded", String(!isHidden));
+      });
+    </script>
+
+    <!-- Custom JavaScript -->
+    <script src="../js/script.js"></script>
   </body>
 </html>
