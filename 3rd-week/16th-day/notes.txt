@@ -38,3 +38,7 @@ Debouncing is a performance optimization technique that forces a function to wai
 Throttling
 
 Throttling is a performance optimization technique that limits the maximum number of times a function can run over a given period. It ensures the function executes at regular, predictable intervals (e.g., at most once every 300 milliseconds), completely ignoring any extra triggers in between.
+
+
+Completed the JS PRactice questions and answers provided 
+completed basic questions upto easy level to mid of Medium level questions.
