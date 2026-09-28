@@ -1,0 +1,1 @@
+http://awfis-case-study.s3-website.ap-south-1.amazonaws.com/aws/html/index.html
