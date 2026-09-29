@@ -1,0 +1,9 @@
+28/September/2026 Monday
+---------------------------------------------------------
+
+Case study was given
+
+Topic: Make a clone of AWSfis.com with HTML, CSS & JS with also Bootstrap Framework
+
+Progress:
+Completed Half of the Case study task given.
