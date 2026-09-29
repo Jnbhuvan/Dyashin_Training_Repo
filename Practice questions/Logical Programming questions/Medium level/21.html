@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Implementation of Debounce Function</title>
+  </head>
+  <body>
+    <h1>Implmentation of Debounce Function</h1>
+    <p>
+      debounce function delays the execution of a function until a specified
+      period has passed since the last time it was invoked, preventing excessive
+      calls during rapid events.
+    </p>
+    <h2>Medium level logical questions</h2>
+    <h3>by BHUVAN J N</h3>
+    <script>
+      function debounce(fn, delay) {
+        let timer;
+
+        return function () {
+          clearTimeout(timer);
+
+          timer = setTimeout(() => {
+            fn();
+          }, delay);
+        };
+      }
+
+      let sayhello = () => {
+        console.log("hello world");
+      };
+      const hello = debounce(sayhello, 1000);
+      hello();
+
+      hello();
+    </script>
+  </body>
+</html>
