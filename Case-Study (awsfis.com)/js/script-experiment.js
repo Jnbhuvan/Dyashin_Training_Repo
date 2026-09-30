@@ -1,10 +1,3 @@
-// const menuButton = document.querySelector('[aria-label="Open menu"]');
-// const mobileMenu1 = menuButton.parentElement.nextElementSibling;
-
-// menuButton.addEventListener("click", () => {
-//   mobileMenu1.classList.toggle("hidden");
-// });
-
 const mobileMenuButton = document.getElementById("mobile-menu-button");
 
 const mobileMenu = document.getElementById("mobile-menu");
@@ -88,14 +81,6 @@ showLogin.addEventListener("click", function () {
 const navbarLoginButton = document.getElementById("navbar-login-button");
 
 navbarLoginButton.addEventListener("click", function () {
-  const loggedIn = localStorage.getItem("awfisLoggedIn");
-
-  if (loggedIn === "true") {
-    alert("You are already logged in.");
-
-    return;
-  }
-
   openLogin();
 });
 
@@ -145,7 +130,7 @@ locationItems.forEach(function (location) {
   });
 });
 
-loginForm.addEventListener("submit", function (event) {
+loginForm.addEventListener("submit", async function (event) {
   event.preventDefault();
 
   const email = document.getElementById("login-email").value.trim();
@@ -158,22 +143,47 @@ loginForm.addEventListener("submit", function (event) {
     return;
   }
 
-  localStorage.setItem("awfisLoggedIn", "true");
+  try {
+    const response = await fetch("http://localhost:8080/api/login", {
+      method: "POST",
 
-  localStorage.setItem("awfisUserEmail", email);
+      headers: {
+        "Content-Type": "application/json",
+      },
 
-  alert("Login successful!");
+      body: JSON.stringify({
+        email: email,
+        password: password,
+      }),
+    });
 
-  closeAuth();
+    const data = await response.json();
 
-  if (pendingLocationUrl) {
-    window.location.href = pendingLocationUrl;
+    if (!response.ok) {
+      alert(data.message || "Login failed.");
 
-    pendingLocationUrl = null;
+      return;
+    }
+
+    localStorage.setItem("awfisLoggedIn", "true");
+
+    alert("Login successful.");
+
+    closeAuth();
+
+    if (pendingLocationUrl) {
+      window.location.href = pendingLocationUrl;
+
+      pendingLocationUrl = null;
+    }
+  } catch (error) {
+    alert("Unable to connect to the server.");
+
+    console.log(error);
   }
 });
 
-signupForm.addEventListener("submit", function (event) {
+signupForm.addEventListener("submit", async function (event) {
   event.preventDefault();
 
   const name = document.getElementById("signup-name").value.trim();
@@ -185,6 +195,12 @@ signupForm.addEventListener("submit", function (event) {
   const confirmPassword = document.getElementById(
     "signup-confirm-password",
   ).value;
+
+  if (name === "" || email === "" || password === "") {
+    alert("Please fill in all required fields.");
+
+    return;
+  }
 
   if (password !== confirmPassword) {
     alert("Passwords do not match.");
@@ -198,19 +214,45 @@ signupForm.addEventListener("submit", function (event) {
     return;
   }
 
-  localStorage.setItem("awfisUserName", name);
+  try {
+    const response = await fetch("http://localhost:8080/api/signup", {
+      method: "POST",
 
-  localStorage.setItem("awfisUserEmail", email);
+      headers: {
+        "Content-Type": "application/json",
+      },
 
-  localStorage.setItem("awfisLoggedIn", "true");
+      body: JSON.stringify({
+        name: name,
 
-  alert("Account created successfully!");
+        email: email,
 
-  closeAuth();
+        password: password,
+      }),
+    });
 
-  if (pendingLocationUrl) {
-    window.location.href = pendingLocationUrl;
+    const data = await response.json();
 
-    pendingLocationUrl = null;
+    if (!response.ok) {
+      alert(data.message || "Failed to sign up.");
+
+      return;
+    }
+
+    localStorage.setItem("awfisLoggedIn", "true");
+
+    alert("Account created successfully!");
+
+    closeAuth();
+
+    if (pendingLocationUrl) {
+      window.location.href = pendingLocationUrl;
+
+      pendingLocationUrl = null;
+    }
+  } catch (error) {
+    console.log(error);
+    console.log(data);
+    alert("Account was not able to be created.");
   }
 });
