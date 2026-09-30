@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <h1>Check anagrams</h1>
+    <script>
+      function checkAnagram(str1, str2) {
+        if (str1.length != str2.length) {
+          return false;
+        }
+
+        let count = {};
+
+        for (let s of str1) {
+          if (count[s]) {
+            count[s]++;
+          } else {
+            count[s] = 1;
+          }
+        }
+        for (let s of str2) {
+          if (!count[s]) {
+            return false;
+          } else {
+            count[s]--;
+          }
+        }
+        return true;
+      }
+      console.log(checkAnagram("listen", "silent"));
+
+      function checkAnagramEasy(str1, str2) {
+        return (
+          str1.split("").sort().join("") === str2.split("").sort().join("")
+        );
+      }
+      console.log(
+        "easy method",
+        checkAnagramEasy("listen", "sildkfjlsdkfjent"),
+      );
+    </script>
+  </body>
+</html>
