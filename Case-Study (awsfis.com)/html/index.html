@@ -6,25 +6,15 @@
 
     <title>Awfis - Shared & Co-Working Spaces</title>
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
 
   <body class="bg-white text-gray-900">
-    <!-- =========================================================
-         NAVBAR
-    ========================================================== -->
-
     <header class="sticky top-0 z-50 bg-black text-white">
       <div class="container mx-auto px-4 sm:px-5">
         <div class="flex h-16 items-center justify-between">
-          <!-- =================================================
-               LOGO
-          ================================================== -->
-
           <a href="#" class="flex shrink-0 items-center">
             <img
               src="../awfis.svg"
@@ -33,27 +23,15 @@
             />
           </a>
 
-          <!-- =================================================
-               DESKTOP NAVIGATION
-          ================================================== -->
-
           <nav
             class="hidden md:ml-8 md:flex md:items-center md:border-l md:border-gray-600 md:pl-8"
           >
-            <!-- =================================================
-                 LOCATIONS DROPDOWN
-            ================================================== -->
-
             <div class="group relative">
-              <!-- Locations -->
-
               <a
                 href="#"
                 class="mr-6 flex items-center gap-1 text-sm font-semibold text-white transition hover:text-red-400"
               >
                 LOCATIONS
-
-                <!-- Arrow -->
 
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -71,24 +49,16 @@
                 </svg>
               </a>
 
-              <!-- =================================================
-                   LOCATION DROPDOWN
-              ================================================== -->
-
               <div
                 id="locations-dropdown"
                 class="absolute left-0 top-full z-50 hidden w-[300px] overflow-hidden bg-white text-gray-500 shadow-2xl group-hover:block"
               >
-                <!-- Delhi -->
-
                 <a
                   href="delhi.html"
                   class="location-item block border-b border-gray-200 px-5 py-5 text-sm uppercase transition hover:bg-gray-50 hover:text-red-500"
                 >
                   Coworking Space in Delhi
                 </a>
-
-                <!-- Gurgaon -->
 
                 <a
                   href="gurgaon.html"
@@ -97,16 +67,12 @@
                   Coworking Space in Gurgaon
                 </a>
 
-                <!-- Noida -->
-
                 <a
                   href="noida.html"
                   class="location-item block border-b border-gray-200 px-5 py-5 text-sm uppercase transition hover:bg-gray-50 hover:text-red-500"
                 >
                   Coworking Space in Noida
                 </a>
-
-                <!-- Mumbai -->
 
                 <a
                   href="mumbai.html"
@@ -115,8 +81,6 @@
                   Coworking Space in Mumbai
                 </a>
 
-                <!-- Bengaluru -->
-
                 <a
                   href="bengaluru.html"
                   class="location-item block border-b border-gray-200 px-5 py-5 text-sm uppercase transition hover:bg-gray-50 hover:text-red-500"
@@ -124,16 +88,12 @@
                   Coworking Space in Bengaluru
                 </a>
 
-                <!-- Hyderabad -->
-
                 <a
                   href="hyderabad.html"
                   class="location-item block border-b border-gray-200 px-5 py-5 text-sm uppercase transition hover:bg-gray-50 hover:text-red-500"
                 >
                   Coworking Space in Hyderabad
                 </a>
-
-                <!-- Kolkata -->
 
                 <a
                   href="kolkata.html"
@@ -144,10 +104,6 @@
               </div>
             </div>
 
-            <!-- =================================================
-                 SOLUTIONS
-            ================================================== -->
-
             <a
               href="#"
               class="mr-6 text-sm font-semibold text-white transition hover:text-red-400"
@@ -155,20 +111,12 @@
               SOLUTIONS
             </a>
 
-            <!-- =================================================
-                 ENTERPRISE
-            ================================================== -->
-
             <a
               href="#"
               class="mr-6 text-sm font-semibold text-white transition hover:text-red-400"
             >
               ENTERPRISE
             </a>
-
-            <!-- =================================================
-                 MEETING ROOMS
-            ================================================== -->
 
             <a
               href="#"
@@ -178,13 +126,7 @@
             </a>
           </nav>
 
-          <!-- =================================================
-               DESKTOP BUTTONS
-          ================================================== -->
-
           <div class="hidden md:ml-auto md:flex md:items-center md:gap-3">
-            <!-- Login -->
-
             <button
               id="navbar-login-button"
               type="button"
@@ -204,8 +146,6 @@
                 <path d="M5 12h14M12 5l7 7-7 7"></path>
               </svg>
             </button>
-
-            <!-- Sign Up -->
 
             <button
               id="navbar-signup-button"
@@ -227,10 +167,6 @@
               </svg>
             </button>
           </div>
-
-          <!-- =================================================
-               MOBILE MENU BUTTON
-          ================================================== -->
 
           <button
             id="mobile-menu-button"
@@ -256,10 +192,6 @@
           </button>
         </div>
 
-        <!-- =================================================
-             MOBILE MENU
-        ================================================== -->
-
         <div
           id="mobile-menu"
           class="hidden border-t border-gray-800 pb-4 md:hidden"
@@ -280,8 +212,6 @@
             <a href="#" class="rounded px-2 py-2 transition hover:bg-gray-800">
               Meeting Rooms
             </a>
-
-            <!-- Mobile Buttons -->
 
             <div class="mt-3 flex gap-2">
               <button
@@ -305,23 +235,15 @@
       </div>
     </header>
 
-    <!-- =========================================================
-         HERO SECTION
-    ========================================================== -->
-
     <section
       class="relative overflow-hidden bg-cover bg-center bg-no-repeat"
       style="background-image: url(&quot;../hero.png&quot;)"
     >
-      <!-- Overlay -->
-
       <div class="absolute inset-0 bg-slate-900/45"></div>
 
       <div
         class="relative container mx-auto flex min-h-[650px] flex-col items-center gap-12 px-5 py-20 md:flex-row"
       >
-        <!-- Hero Content -->
-
         <div
           class="mb-10 flex flex-col items-center rounded-2xl bg-white/95 p-8 text-center shadow-2xl backdrop-blur-sm md:mb-0 md:w-1/2 md:items-start md:p-10 md:text-left lg:flex-grow lg:pr-16"
         >
@@ -344,8 +266,6 @@
           </p>
         </div>
 
-        <!-- Hero Image -->
-
         <div
           class="relative z-10 flex w-5/6 justify-center p-2 md:w-1/2 md:p-4 lg:w-full lg:max-w-lg lg:translate-x-3"
         >
@@ -358,10 +278,6 @@
       </div>
     </section>
 
-    <!-- =========================================================
-         WORKSPACE TYPES
-    ========================================================== -->
-
     <section class="flex min-h-screen items-center justify-center px-6 py-16">
       <div class="w-full max-w-6xl">
         <h2
@@ -373,8 +289,6 @@
         <div
           class="grid grid-cols-1 gap-0 overflow-hidden shadow-lg sm:grid-cols-2 lg:grid-cols-4"
         >
-          <!-- Card 1 -->
-
           <div
             class="group relative h-[400px] overflow-hidden border-b-4 border-red-500"
           >
@@ -394,8 +308,6 @@
               <h3 class="text-lg font-semibold">Coworking</h3>
             </div>
           </div>
-
-          <!-- Card 2 -->
 
           <div
             class="group relative h-[400px] overflow-hidden border-b-4 border-red-500"
@@ -417,8 +329,6 @@
             </div>
           </div>
 
-          <!-- Card 3 -->
-
           <div
             class="group relative h-[400px] overflow-hidden border-b-4 border-red-500"
           >
@@ -438,8 +348,6 @@
               <h3 class="text-lg font-semibold">Mobility</h3>
             </div>
           </div>
-
-          <!-- Card 4 -->
 
           <div
             class="group relative h-[400px] overflow-hidden border-b-4 border-red-500"
@@ -464,10 +372,6 @@
       </div>
     </section>
 
-    <!-- =========================================================
-         GROWING NETWORK
-    ========================================================== -->
-
     <section class="body-font text-gray-600">
       <div class="container mx-auto flex flex-wrap px-5 py-24">
         <div class="mb-20 flex w-full flex-wrap">
@@ -483,11 +387,7 @@
           </p>
         </div>
 
-        <!-- Gallery -->
-
         <div class="flex flex-wrap md:-m-2 -m-1">
-          <!-- Left -->
-
           <div class="flex w-1/2 flex-wrap">
             <div class="w-1/2 p-1 md:p-2">
               <img
@@ -513,8 +413,6 @@
               />
             </div>
           </div>
-
-          <!-- Right -->
 
           <div class="flex w-1/2 flex-wrap">
             <div class="w-full p-1 md:p-2">
@@ -545,15 +443,9 @@
       </div>
     </section>
 
-    <!-- =========================================================
-         FOOTER
-    ========================================================== -->
-
     <footer class="body-font text-gray-600">
       <div class="container mx-auto px-5 py-24">
         <div class="flex flex-wrap text-center md:text-left">
-          <!-- About -->
-
           <div class="w-full px-4 md:w-1/2 lg:w-1/4">
             <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900">
               About
@@ -595,8 +487,6 @@
               </li>
             </nav>
           </div>
-
-          <!-- Products -->
 
           <div class="w-full px-4 md:w-1/2 lg:w-1/4">
             <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900">
@@ -648,8 +538,6 @@
             </nav>
           </div>
 
-          <!-- Contact -->
-
           <div class="w-full px-4 md:w-1/2 lg:w-1/4">
             <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900">
               Contact
@@ -687,8 +575,6 @@
               </li>
             </nav>
           </div>
-
-          <!-- Subscribe -->
 
           <div class="w-full px-4 md:w-1/2 lg:w-1/4">
             <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900">
@@ -730,8 +616,6 @@
         </div>
       </div>
 
-      <!-- Footer Bottom -->
-
       <div class="bg-gray-100">
         <div
           class="container mx-auto flex flex-col items-center px-5 py-6 sm:flex-row"
@@ -751,13 +635,9 @@
             © 2026 Awfis. All rights reserved.
           </p>
 
-          <!-- Social Icons -->
-
           <span
             class="mt-4 inline-flex justify-center sm:ml-auto sm:mt-0 sm:justify-start"
           >
-            <!-- Facebook -->
-
             <a
               href="#"
               aria-label="Facebook"
@@ -770,8 +650,6 @@
               </svg>
             </a>
 
-            <!-- Twitter -->
-
             <a
               href="#"
               aria-label="Twitter"
@@ -783,8 +661,6 @@
                 ></path>
               </svg>
             </a>
-
-            <!-- Instagram -->
 
             <a
               href="#"
@@ -805,8 +681,6 @@
               </svg>
             </a>
 
-            <!-- LinkedIn -->
-
             <a
               href="#"
               aria-label="LinkedIn"
@@ -825,10 +699,6 @@
       </div>
     </footer>
 
-    <!-- =========================================================
-         LOGIN / SIGN UP MODAL
-    ========================================================== -->
-
     <div
       id="auth-modal"
       class="fixed inset-0 z-[9999] hidden items-center justify-center bg-black/70 px-4 backdrop-blur-sm"
@@ -836,8 +706,6 @@
       <div
         class="relative w-full max-w-md overflow-hidden rounded-2xl bg-white shadow-2xl"
       >
-        <!-- Close -->
-
         <button
           id="close-auth-modal"
           type="button"
@@ -846,13 +714,7 @@
           &times;
         </button>
 
-        <!-- =====================================================
-             LOGIN SECTION
-        ====================================================== -->
-
         <div id="login-section" class="p-8">
-          <!-- Logo -->
-
           <div class="mb-6 flex justify-center">
             <img
               src="../awfis.svg"
@@ -861,19 +723,13 @@
             />
           </div>
 
-          <!-- Heading -->
-
           <div class="mb-7 text-center">
             <h2 class="text-2xl font-bold text-gray-900">Welcome Back</h2>
 
             <p class="mt-2 text-sm text-gray-500">Login to continue to Awfis</p>
           </div>
 
-          <!-- Login Form -->
-
           <form id="login-form">
-            <!-- Email -->
-
             <div class="mb-4">
               <label
                 for="login-email"
@@ -890,8 +746,6 @@
                 class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm outline-none transition focus:border-red-500 focus:ring-2 focus:ring-red-200"
               />
             </div>
-
-            <!-- Password -->
 
             <div class="mb-6">
               <label
@@ -910,8 +764,6 @@
               />
             </div>
 
-            <!-- Login Button -->
-
             <button
               type="submit"
               class="w-full rounded-lg bg-red-500 px-5 py-3 font-semibold text-white transition hover:bg-red-600"
@@ -919,8 +771,6 @@
               Login
             </button>
           </form>
-
-          <!-- Sign Up Link -->
 
           <p class="mt-6 text-center text-sm text-gray-500">
             Don't have an account?
@@ -935,13 +785,7 @@
           </p>
         </div>
 
-        <!-- =====================================================
-             SIGN UP SECTION
-        ====================================================== -->
-
         <div id="signup-section" class="hidden p-8">
-          <!-- Logo -->
-
           <div class="mb-6 flex justify-center">
             <img
               src="../awfis.svg"
@@ -949,8 +793,6 @@
               class="h-10 w-auto object-contain"
             />
           </div>
-
-          <!-- Heading -->
 
           <div class="mb-7 text-center">
             <h2 class="text-2xl font-bold text-gray-900">
@@ -962,11 +804,7 @@
             </p>
           </div>
 
-          <!-- Signup Form -->
-
           <form id="signup-form">
-            <!-- Name -->
-
             <div class="mb-4">
               <label
                 for="signup-name"
@@ -984,8 +822,6 @@
               />
             </div>
 
-            <!-- Email -->
-
             <div class="mb-4">
               <label
                 for="signup-email"
@@ -1002,8 +838,6 @@
                 class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm outline-none transition focus:border-red-500 focus:ring-2 focus:ring-red-200"
               />
             </div>
-
-            <!-- Password -->
 
             <div class="mb-4">
               <label
@@ -1023,8 +857,6 @@
               />
             </div>
 
-            <!-- Confirm Password -->
-
             <div class="mb-6">
               <label
                 for="signup-confirm-password"
@@ -1043,8 +875,6 @@
               />
             </div>
 
-            <!-- Signup Button -->
-
             <button
               type="submit"
               class="w-full rounded-lg bg-red-500 px-5 py-3 font-semibold text-white transition hover:bg-red-600"
@@ -1052,8 +882,6 @@
               Create Account
             </button>
           </form>
-
-          <!-- Login Link -->
 
           <p class="mt-6 text-center text-sm text-gray-500">
             Already have an account?
@@ -1070,15 +898,7 @@
       </div>
     </div>
 
-    <!-- =========================================================
-         JAVASCRIPT
-    ========================================================== -->
-
     <script>
-      /* =========================================================
-         MOBILE MENU
-      ========================================================== */
-
       const mobileMenuButton = document.getElementById("mobile-menu-button");
 
       const mobileMenu = document.getElementById("mobile-menu");
@@ -1088,10 +908,6 @@
 
         mobileMenuButton.setAttribute("aria-expanded", String(!isHidden));
       });
-
-      /* =========================================================
-         AUTH ELEMENTS
-      ========================================================== */
 
       const authModal = document.getElementById("auth-modal");
 
@@ -1109,25 +925,7 @@
 
       const signupForm = document.getElementById("signup-form");
 
-      /* =========================================================
-         PENDING LOCATION
-      ========================================================== */
-
-      /*
-         This stores the location page the user wanted
-         to visit before the login popup appeared.
-
-         Example:
-
-         User clicks Delhi
-         pendingLocationUrl = "delhi.html"
-      */
-
       let pendingLocationUrl = null;
-
-      /* =========================================================
-         OPEN LOGIN
-      ========================================================== */
 
       function openLogin() {
         authModal.classList.remove("hidden");
@@ -1139,10 +937,6 @@
         signupSection.classList.add("hidden");
       }
 
-      /* =========================================================
-         OPEN SIGN UP
-      ========================================================== */
-
       function openSignup() {
         authModal.classList.remove("hidden");
 
@@ -1153,34 +947,17 @@
         signupSection.classList.remove("hidden");
       }
 
-      /* =========================================================
-         CLOSE AUTH MODAL
-      ========================================================== */
-
       function closeAuth() {
         authModal.classList.add("hidden");
 
         authModal.classList.remove("flex");
       }
 
-      /* =========================================================
-         CLOSE BUTTON
-      ========================================================== */
-
       closeAuthModal.addEventListener("click", function () {
         closeAuth();
 
-        /*
-           If user closes the popup without logging in,
-           remove the pending location.
-        */
-
         pendingLocationUrl = null;
       });
-
-      /* =========================================================
-         CLICK OUTSIDE MODAL
-      ========================================================== */
 
       authModal.addEventListener("click", function (event) {
         if (event.target === authModal) {
@@ -1190,29 +967,17 @@
         }
       });
 
-      /* =========================================================
-         LOGIN -> SIGN UP
-      ========================================================== */
-
       showSignup.addEventListener("click", function () {
         loginSection.classList.add("hidden");
 
         signupSection.classList.remove("hidden");
       });
 
-      /* =========================================================
-         SIGN UP -> LOGIN
-      ========================================================== */
-
       showLogin.addEventListener("click", function () {
         signupSection.classList.add("hidden");
 
         loginSection.classList.remove("hidden");
       });
-
-      /* =========================================================
-         NAVBAR LOGIN BUTTON
-      ========================================================== */
 
       const navbarLoginButton = document.getElementById("navbar-login-button");
 
@@ -1227,10 +992,6 @@
 
         openLogin();
       });
-
-      /* =========================================================
-         NAVBAR SIGN UP BUTTON
-      ========================================================== */
 
       const navbarSignupButton = document.getElementById(
         "navbar-signup-button",
@@ -1248,19 +1009,11 @@
         openSignup();
       });
 
-      /* =========================================================
-         MOBILE LOGIN
-      ========================================================== */
-
       const mobileLoginButton = document.getElementById("mobile-login-button");
 
       mobileLoginButton.addEventListener("click", function () {
         openLogin();
       });
-
-      /* =========================================================
-         MOBILE SIGN UP
-      ========================================================== */
 
       const mobileSignupButton = document.getElementById(
         "mobile-signup-button",
@@ -1270,76 +1023,25 @@
         openSignup();
       });
 
-      /* =========================================================
-         LOCATION ITEMS
-      ========================================================== */
-
       const locationItems = document.querySelectorAll(".location-item");
 
       locationItems.forEach(function (location) {
         location.addEventListener("click", function (event) {
-          /*
-             Check whether user is already logged in.
-          */
-
           const loggedIn = localStorage.getItem("awfisLoggedIn");
-
-          /*
-             Get the actual href of the clicked location.
-
-             Example:
-
-             Delhi    -> delhi.html
-             Gurgaon  -> gurgaon.html
-             Mumbai   -> mumbai.html
-          */
 
           const locationUrl = location.getAttribute("href");
 
-          /* =============================================
-             USER ALREADY LOGGED IN
-          ============================================== */
-
           if (loggedIn === "true") {
-            /*
-               IMPORTANT:
-
-               We do NOT call event.preventDefault().
-
-               Therefore the browser follows the
-               href normally.
-            */
-
             return;
           }
 
-          /* =============================================
-             USER NOT LOGGED IN
-          ============================================== */
-
-          /*
-             Stop the browser from navigating immediately.
-          */
-
           event.preventDefault();
 
-          /*
-             Remember the city page.
-          */
-
           pendingLocationUrl = locationUrl;
-
-          /*
-             Open login popup.
-          */
 
           openLogin();
         });
       });
-
-      /* =========================================================
-         LOGIN FORM
-      ========================================================== */
 
       loginForm.addEventListener("submit", function (event) {
         event.preventDefault();
@@ -1348,19 +1050,11 @@
 
         const password = document.getElementById("login-password").value;
 
-        /* Check fields */
-
         if (email === "" || password === "") {
           alert("Please enter email and password.");
 
           return;
         }
-
-        /*
-           Frontend-only login.
-
-           Save login state.
-        */
 
         localStorage.setItem("awfisLoggedIn", "true");
 
@@ -1370,21 +1064,12 @@
 
         closeAuth();
 
-        /*
-           If the user originally clicked
-           a location, redirect to it.
-        */
-
         if (pendingLocationUrl) {
           window.location.href = pendingLocationUrl;
 
           pendingLocationUrl = null;
         }
       });
-
-      /* =========================================================
-         SIGN UP FORM
-      ========================================================== */
 
       signupForm.addEventListener("submit", function (event) {
         event.preventDefault();
@@ -1399,29 +1084,17 @@
           "signup-confirm-password",
         ).value;
 
-        /* =============================================
-             PASSWORD MATCH
-        ============================================== */
-
         if (password !== confirmPassword) {
           alert("Passwords do not match.");
 
           return;
         }
 
-        /* =============================================
-             PASSWORD LENGTH
-        ============================================== */
-
         if (password.length < 6) {
           alert("Password must contain at least 6 characters.");
 
           return;
         }
-
-        /* =============================================
-             SAVE USER
-        ============================================== */
 
         localStorage.setItem("awfisUserName", name);
 
@@ -1433,11 +1106,6 @@
 
         closeAuth();
 
-        /*
-           If the user originally clicked
-           a location, redirect to it.
-        */
-
         if (pendingLocationUrl) {
           window.location.href = pendingLocationUrl;
 
@@ -1445,8 +1113,6 @@
         }
       });
     </script>
-
-    <!-- Existing custom JavaScript -->
 
     <script src="../js/script.js"></script>
   </body>
