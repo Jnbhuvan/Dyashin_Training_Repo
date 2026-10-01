@@ -7,7 +7,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../css/styles.css" />
     <style>
-      /* Space cards (scoped so they don't clash with styles.css) */
       .space-card .space-title {
         text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
       }
@@ -33,7 +32,7 @@
           >
             <div class="group relative">
               <a
-                href="ind"
+                href="index1.html"
                 class="mr-6 flex items-center gap-1 text-sm font-semibold text-white transition hover:text-red-400"
               >
                 LOCATIONS
@@ -1070,123 +1069,6 @@
       </div>
     </footer>
 
-    <script>
-      const $ = (id) => document.getElementById(id);
-
-      const mobileMenuButton = $("mobile-menu-button");
-      const mobileMenu = $("mobile-menu");
-      const authModal = $("auth-modal");
-      const loginSection = $("login-section");
-      const signupSection = $("signup-section");
-
-      let pendingLocationUrl = null;
-
-      const store = {
-        get(key) {
-          try {
-            return localStorage.getItem(key);
-          } catch (e) {
-            return null;
-          }
-        },
-        set(key, value) {
-          try {
-            localStorage.setItem(key, value);
-          } catch (e) {}
-        },
-      };
-      const isLoggedIn = () => store.get("awfisLoggedIn") === "true";
-
-      function openAuth(mode) {
-        authModal.classList.remove("hidden");
-        authModal.classList.add("flex");
-        loginSection.classList.toggle("hidden", mode !== "login");
-        signupSection.classList.toggle("hidden", mode !== "signup");
-      }
-      function closeAuth() {
-        authModal.classList.add("hidden");
-        authModal.classList.remove("flex");
-        pendingLocationUrl = null;
-      }
-      function finishAuth() {
-        const target = pendingLocationUrl;
-        closeAuth();
-        if (target) window.location.href = target;
-      }
-
-      mobileMenuButton.addEventListener("click", () => {
-        const isHidden = mobileMenu.classList.toggle("hidden");
-        mobileMenuButton.setAttribute("aria-expanded", String(!isHidden));
-      });
-
-      $("close-auth-modal").addEventListener("click", closeAuth);
-      authModal.addEventListener("click", (e) => {
-        if (e.target === authModal) closeAuth();
-      });
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") closeAuth();
-      });
-      $("show-signup").addEventListener("click", () => openAuth("signup"));
-      $("show-login").addEventListener("click", () => openAuth("login"));
-
-      [
-        ["navbar-login-button", "login"],
-        ["mobile-login-button", "login"],
-        ["navbar-signup-button", "signup"],
-        ["mobile-signup-button", "signup"],
-      ].forEach(([id, mode]) => {
-        $(id).addEventListener("click", () => {
-          if (isLoggedIn()) {
-            alert("You are already logged in.");
-            return;
-          }
-          openAuth(mode);
-        });
-      });
-
-      document.querySelectorAll(".location-item").forEach((link) => {
-        link.addEventListener("click", (event) => {
-          if (isLoggedIn()) return;
-          event.preventDefault();
-          pendingLocationUrl = link.getAttribute("href");
-          openAuth("login");
-        });
-      });
-
-      $("login-form").addEventListener("submit", (event) => {
-        event.preventDefault();
-        const email = $("login-email").value.trim();
-        const password = $("login-password").value;
-        if (email === "" || password === "") {
-          alert("Please enter email and password.");
-          return;
-        }
-        store.set("awfisLoggedIn", "true");
-        store.set("awfisUserEmail", email);
-        alert("Login successful!");
-        finishAuth();
-      });
-
-      $("signup-form").addEventListener("submit", (event) => {
-        event.preventDefault();
-        const name = $("signup-name").value.trim();
-        const email = $("signup-email").value.trim();
-        const password = $("signup-password").value;
-        const confirmPassword = $("signup-confirm-password").value;
-        if (password !== confirmPassword) {
-          alert("Passwords do not match.");
-          return;
-        }
-        if (password.length < 6) {
-          alert("Password must contain at least 6 characters.");
-          return;
-        }
-        store.set("awfisUserName", name);
-        store.set("awfisUserEmail", email);
-        store.set("awfisLoggedIn", "true");
-        alert("Account created successfully!");
-        finishAuth();
-      });
-    </script>
+    <script src="../js/script-experiment.js"></script>
   </body>
 </html>
