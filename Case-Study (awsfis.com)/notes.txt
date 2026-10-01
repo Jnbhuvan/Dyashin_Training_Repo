@@ -1,1 +1,10 @@
 http://awfis-case-study.s3-website.ap-south-1.amazonaws.com/aws/html/index.html
+
+
+
+
+python3 -m http.server 8080
+
+sudo apt install python3 python3-pip -y
+
+sudo apt install python3 python3-pip python3-venv -y
