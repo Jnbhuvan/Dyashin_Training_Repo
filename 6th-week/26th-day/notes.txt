@@ -3,3 +3,6 @@
 Git & GitLab Introduction
 
 Hands On practice
+
+ssh -i "newec2.pem" ubuntu@ec2-13-232-68-123.ap-south-1.compute.amazonaws.com
+glpat-vbWJpMcg2drS-k6hwT0Y6mM6MQpvOjEKdTpwcmg5Mg8.01.171g299yw 
