@@ -1,0 +1,39 @@
+14th/October/2026 (28th-day)
+f
+
+Python Introduction
+
+Used in 
+AI/ML
+Data Science
+Web Development ....
+
+Features:
+Lib, modul, frameworks
+simple, cross
+Interpretated language
+Dynamically typed 
+OOPs support
+
+Uses PVM
+
+Variable declartion in python:
+1. No keyword is needed.
+2. Multiple assignment is supported in python.
+3. Supports all cases (Pascal case, Kebab case, lower case, camel case & upper case)
+
+DataTypes in python:
+1. Int ( 1,2,3,4)
+2. Float (1.345)
+3. String ("hello world")
+4. Boolean (true, false)
+5. Complex (3 + 4j)
+6. none
+7. list, tuple, set, dict (sequence data types)
+
+Non primitive data types in python:
+1. List: [1,2,3,4,5]
+2. Tuple: num = (1,2,3,4,5)
+3. Set = { 1,2,3,4,5}
+4. dict = { "key":"value"}
+
